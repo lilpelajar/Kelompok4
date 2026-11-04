@@ -37,13 +37,14 @@
             txtUsername = new TextBox();
             comboBox1 = new ComboBox();
             txtEmail = new TextBox();
+            chkShowPassword = new CheckBox();
             SuspendLayout();
             // 
             // linkLabel1
             // 
             linkLabel1.Anchor = AnchorStyles.Bottom;
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(276, 496);
+            linkLabel1.Location = new Point(276, 567);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(74, 20);
             linkLabel1.TabIndex = 13;
@@ -54,7 +55,7 @@
             // 
             label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
-            label2.Location = new Point(133, 496);
+            label2.Location = new Point(133, 567);
             label2.Name = "label2";
             label2.Size = new Size(137, 20);
             label2.TabIndex = 12;
@@ -62,7 +63,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(76, 306);
+            btnLogin.Location = new Point(76, 423);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(345, 49);
             btnLogin.TabIndex = 11;
@@ -72,7 +73,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(74, 211);
+            textBox1.Location = new Point(76, 245);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Password";
             textBox1.Size = new Size(345, 34);
@@ -81,7 +82,7 @@
             // txtFullname
             // 
             txtFullname.Font = new Font("Segoe UI", 12F);
-            txtFullname.Location = new Point(74, 135);
+            txtFullname.Location = new Point(76, 141);
             txtFullname.Name = "txtFullname";
             txtFullname.PlaceholderText = "Full Name";
             txtFullname.Size = new Size(345, 34);
@@ -111,7 +112,7 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(74, 262);
+            comboBox1.Location = new Point(76, 328);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(345, 33);
             comboBox1.TabIndex = 15;
@@ -119,17 +120,28 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 12F);
-            txtEmail.Location = new Point(76, 173);
+            txtEmail.Location = new Point(76, 193);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email";
             txtEmail.Size = new Size(345, 34);
             txtEmail.TabIndex = 16;
             // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(76, 287);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(132, 24);
+            chkShowPassword.TabIndex = 17;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            // 
             // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(500, 525);
+            ClientSize = new Size(500, 596);
+            Controls.Add(chkShowPassword);
             Controls.Add(txtEmail);
             Controls.Add(comboBox1);
             Controls.Add(txtUsername);
@@ -150,7 +162,7 @@
         private LinkLabel linkLabel1;
         private Label label2;
         private Button btnLogin;
-        private CheckBox checkBox1;
+        private CheckBox chkShowPassword;
         private TextBox textBox1;
         private TextBox txtFullname;
         private Label label1;
