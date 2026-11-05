@@ -6,5 +6,6 @@ namespace TugasKelompokHayyuk.Services
 {
     public class AuthService
     {
+        public AuthService() { } 
     }
 }

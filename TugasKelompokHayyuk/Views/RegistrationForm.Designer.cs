@@ -30,12 +30,12 @@
         {
             linkLabel1 = new LinkLabel();
             label2 = new Label();
-            btnLogin = new Button();
-            textBox1 = new TextBox();
+            btnSignup = new Button();
+            txtPssword = new TextBox();
             txtFullname = new TextBox();
             label1 = new Label();
             txtUsername = new TextBox();
-            comboBox1 = new ComboBox();
+            cmbRole = new ComboBox();
             txtEmail = new TextBox();
             chkShowPassword = new CheckBox();
             SuspendLayout();
@@ -61,23 +61,24 @@
             label2.TabIndex = 12;
             label2.Text = "Belum punya akun?";
             // 
-            // btnLogin
+            // btnSignup
             // 
-            btnLogin.Location = new Point(76, 423);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(345, 49);
-            btnLogin.TabIndex = 11;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnSignup.Location = new Point(76, 423);
+            btnSignup.Name = "btnSignup";
+            btnSignup.Size = new Size(345, 49);
+            btnSignup.TabIndex = 11;
+            btnSignup.Text = "Sign up";
+            btnSignup.UseVisualStyleBackColor = true;
+            btnSignup.Click += btnLogin_Click;
             // 
-            // textBox1
+            // txtPssword
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(76, 245);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Password";
-            textBox1.Size = new Size(345, 34);
-            textBox1.TabIndex = 9;
+            txtPssword.Font = new Font("Segoe UI", 12F);
+            txtPssword.Location = new Point(76, 245);
+            txtPssword.Name = "txtPssword";
+            txtPssword.PlaceholderText = "Password";
+            txtPssword.Size = new Size(345, 34);
+            txtPssword.TabIndex = 9;
             // 
             // txtFullname
             // 
@@ -108,14 +109,15 @@
             txtUsername.Size = new Size(345, 34);
             txtUsername.TabIndex = 14;
             // 
-            // comboBox1
+            // cmbRole
             // 
-            comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(76, 328);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(345, 33);
-            comboBox1.TabIndex = 15;
+            cmbRole.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Items.AddRange(new object[] { "Admin", "Guru", "Siswa" });
+            cmbRole.Location = new Point(76, 328);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(345, 33);
+            cmbRole.TabIndex = 15;
             // 
             // txtEmail
             // 
@@ -143,16 +145,17 @@
             ClientSize = new Size(500, 596);
             Controls.Add(chkShowPassword);
             Controls.Add(txtEmail);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbRole);
             Controls.Add(txtUsername);
             Controls.Add(linkLabel1);
             Controls.Add(label2);
-            Controls.Add(btnLogin);
-            Controls.Add(textBox1);
+            Controls.Add(btnSignup);
+            Controls.Add(txtPssword);
             Controls.Add(txtFullname);
             Controls.Add(label1);
             Name = "RegistrationForm";
             Text = "RegistrationForm";
+            Load += RegistrationForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,13 +164,13 @@
 
         private LinkLabel linkLabel1;
         private Label label2;
-        private Button btnLogin;
+        private Button btnSignup;
         private CheckBox chkShowPassword;
-        private TextBox textBox1;
+        private TextBox txtPssword;
         private TextBox txtFullname;
         private Label label1;
         private TextBox txtUsername;
-        private ComboBox comboBox1;
+        private ComboBox cmbRole;
         private TextBox txtEmail;
     }
 }

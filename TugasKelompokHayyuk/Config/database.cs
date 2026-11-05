@@ -9,7 +9,7 @@ namespace TugasKelompokHayyuk.Config
     {
         private readonly string connectionstring = "Server=localhost;Database=siakada ;Uid=root;Pwd=;";
 
-        public MySqlConnection MySqlConnection()
+        public MySqlConnection MyConnection()
         {
             return new MySqlConnection(connectionstring);
         }
