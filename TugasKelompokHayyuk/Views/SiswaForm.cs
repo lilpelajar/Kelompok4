@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using TugasKelompokHayyuk.Views.UserControls.SiswaUc;
+
+namespace TugasKelompokHayyuk.Views
+{
+    public partial class SiswaForm : Form
+    {
+        public SiswaForm()
+        {
+            InitializeComponent();
+        }
+        public static object color = Color.FromArgb(6, 21, 50);
+
+        private void SiswaForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ButtonOn(Label labelOn)
+        {
+            labelOn.BackColor = Color.White;
+            labelOn.ForeColor = (Color)color;
+        }
+        private void ButtonOff(Label labelOff)
+        {
+            labelOff.BackColor = (Color)color;
+            labelOff.ForeColor = Color.White;
+        }
+        
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            dashboardUc dashboardUc = new dashboardUc();
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(dashboardUc);
+            dashboardUc.Dock = DockStyle.Top;
+            ButtonOn(btnDashboard);
+        }
+    }   
+}
