@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            linkLabel1 = new LinkLabel();
+            linkLogin = new LinkLabel();
             label2 = new Label();
             btnSignup = new Button();
             txtPssword = new TextBox();
@@ -38,18 +38,20 @@
             cmbRole = new ComboBox();
             txtEmail = new TextBox();
             chkShowPassword = new CheckBox();
+            label3 = new Label();
             SuspendLayout();
             // 
-            // linkLabel1
+            // linkLogin
             // 
-            linkLabel1.Anchor = AnchorStyles.Bottom;
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(276, 567);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(74, 20);
-            linkLabel1.TabIndex = 13;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Buat akun";
+            linkLogin.Anchor = AnchorStyles.Bottom;
+            linkLogin.AutoSize = true;
+            linkLogin.Location = new Point(276, 567);
+            linkLogin.Name = "linkLogin";
+            linkLogin.Size = new Size(46, 20);
+            linkLogin.TabIndex = 13;
+            linkLogin.TabStop = true;
+            linkLogin.Text = "Login";
+            linkLogin.LinkClicked += linkLogin_LinkClicked;
             // 
             // label2
             // 
@@ -57,9 +59,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(133, 567);
             label2.Name = "label2";
-            label2.Size = new Size(137, 20);
+            label2.Size = new Size(136, 20);
             label2.TabIndex = 12;
-            label2.Text = "Belum punya akun?";
+            label2.Text = "Sudah punya akun?";
             // 
             // btnSignup
             // 
@@ -138,16 +140,27 @@
             chkShowPassword.Text = "Show Password";
             chkShowPassword.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = SystemColors.AppWorkspace;
+            label3.Location = new Point(76, 364);
+            label3.Name = "label3";
+            label3.Size = new Size(67, 20);
+            label3.TabIndex = 18;
+            label3.Text = "*Isi Role ";
+            // 
             // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 596);
+            Controls.Add(label3);
             Controls.Add(chkShowPassword);
             Controls.Add(txtEmail);
             Controls.Add(cmbRole);
             Controls.Add(txtUsername);
-            Controls.Add(linkLabel1);
+            Controls.Add(linkLogin);
             Controls.Add(label2);
             Controls.Add(btnSignup);
             Controls.Add(txtPssword);
@@ -162,7 +175,7 @@
 
         #endregion
 
-        private LinkLabel linkLabel1;
+        private LinkLabel linkLogin;
         private Label label2;
         private Button btnSignup;
         private CheckBox chkShowPassword;
@@ -172,5 +185,6 @@
         private TextBox txtUsername;
         private ComboBox cmbRole;
         private TextBox txtEmail;
+        private Label label3;
     }
 }

@@ -22,38 +22,53 @@ namespace TugasKelompokHayyuk.Views
 
         private void RegistrationForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {    
-                if (string.IsNullOrWhiteSpace(txtUsername.Text))
-                {
-                    MessageBox.Show("Nama belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } else if (string.IsNullOrWhiteSpace(txtEmail.Text))
-                {
-                    MessageBox.Show("Email belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } else if (string.IsNullOrWhiteSpace(txtFullname.Text))
-                {
-                    MessageBox.Show("Full name belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } else if (string.IsNullOrWhiteSpace(txtPssword.Text))
-                {
-                    MessageBox.Show("Password belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else if (cmbRole.Text == "")
-                {
-                    MessageBox.Show("Role Masih Kosong", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show("Nama belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                MessageBox.Show("Email belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(txtFullname.Text))
+            {
+                MessageBox.Show("Full name belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(txtPssword.Text))
+            {
+                MessageBox.Show("Password belum diisi", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (cmbRole.Text == "")
+            {
+                MessageBox.Show("Role Masih Kosong", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                SignupRepo.AddUser(new UserModels
-                {
-                    Username = txtUsername.Text,
-                    Email = txtEmail.Text,
-                    FullName = txtFullname.Text,
-                    Password = txtPssword.Text,
-                    RoleUser = cmbRole.Text
-                });
-                MessageBox.Show("data terdaftar", "informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SignupRepo.AddUser(new UserModels
+            {
+                Username = txtUsername.Text,
+                Email = txtEmail.Text,
+                FullName = txtFullname.Text,
+                Password = txtPssword.Text,
+                RoleUser = cmbRole.Text
+            });
+            MessageBox.Show("data terdaftar", "informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            Hide();
+            loginForm.Show();
         }
     }
 }
