@@ -6,13 +6,30 @@ using System.Security.Cryptography;
 using System.Text;
 using TugasKelompokHayyuk.Models;
 using TugasKelompokHayyuk.Repository;
+using TugasKelompokHayyuk.Views;
 
 namespace TugasKelompokHayyuk.Services
 {
     public class UserService 
     {
         SignupRepo SignupRepo = new SignupRepo();
-        public bool UserRegister (string username, string email, string fullname,string password, string role)
+        LoginRepo LoginRepo = new LoginRepo();
+
+        //forms
+        LoginForm LoginForm = new LoginForm();
+        RegistrationForm RegistrationForm = new RegistrationForm();
+        AdminForm AdminForm = new AdminForm();
+        GuruForm GuruForm = new GuruForm();
+        SiswaForm SiswaForm = new SiswaForm();
+        
+
+        private void LoadFormRoleBased(Form form1, Form form2)
+        {
+            MessageBox.Show($"berhasil ke {form2.Name}", "informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            form1.Hide();
+            form2.Show();
+        }
+        public bool UserRegister (string username, string email, string fullname,string password, string role, Form form)
         {
             if (string.IsNullOrWhiteSpace(username) || 
                 string.IsNullOrWhiteSpace(email) || 
@@ -44,17 +61,57 @@ namespace TugasKelompokHayyuk.Services
             {
                 MessageBox.Show("nda berhasil ki terdaftar", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            switch (userModels.RoleUser)
+            {
+                case "Admin":
+                    LoadFormRoleBased(form, AdminForm);
+                    break;
+                case "Guru":
+                    LoadFormRoleBased(form, GuruForm);
+                    break;
+                case "Siswa":
+                    LoadFormRoleBased(form, SiswaForm);
+                    break;
+            }
             return IsSucces;
         }
 
-        public bool UserLogin(string username, string password)
+        public bool UserLogin(string username, string password, Form form)
         {
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("username, email, fullname, password, atau role belum diisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("username atau password blm diisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-            UserModels userModels = new UserModels();
-            bool pw = BCrypt.Net.BCrypt.Verify(password, userModels.Password);
+            UserModels userModels = new UserModels
+            {
+                Username = username
+            };
+
+            bool usrname = LoginRepo.UserLogin(userModels);
+            if (!usrname)
+            {
+                MessageBox.Show("salah username nu kapang", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            bool pwuser = BCrypt.Net.BCrypt.Verify(password, userModels.Password);
+            if (!pwuser)
+            {
+                MessageBox.Show("salah pw nu woi", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            switch (userModels.RoleUser)
+            {
+                case "Admin":
+                    LoadFormRoleBased(form, AdminForm);
+                    break;
+                case "Guru":
+                    LoadFormRoleBased(form, GuruForm);
+                    break;
+                case "Siswa":
+                    LoadFormRoleBased(form, SiswaForm);
+                    break;
+            }
             return true;
         }
 

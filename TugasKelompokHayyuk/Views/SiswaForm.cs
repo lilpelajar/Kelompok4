@@ -19,7 +19,7 @@ namespace TugasKelompokHayyuk.Views
 
         private void SiswaForm_Load(object sender, EventArgs e)
         {
-            
+            btnDashboard_Click(sender, e);
         }
 
         private void ButtonOn(Label labelOn)

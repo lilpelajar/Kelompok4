@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             txtUsername = new TextBox();
-            textBox1 = new TextBox();
+            txtPassword = new TextBox();
             checkBox1 = new CheckBox();
             btnLogin = new Button();
             label2 = new Label();
@@ -57,14 +57,14 @@
             txtUsername.Size = new Size(345, 34);
             txtUsername.TabIndex = 1;
             // 
-            // textBox1
+            // txtPassword
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(76, 175);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Password";
-            textBox1.Size = new Size(345, 34);
-            textBox1.TabIndex = 2;
+            txtPassword.Font = new Font("Segoe UI", 12F);
+            txtPassword.Location = new Point(76, 175);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "Password";
+            txtPassword.Size = new Size(345, 34);
+            txtPassword.TabIndex = 2;
             // 
             // checkBox1
             // 
@@ -84,6 +84,7 @@
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // label2
             // 
@@ -114,7 +115,7 @@
             Controls.Add(label2);
             Controls.Add(btnLogin);
             Controls.Add(checkBox1);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(label1);
             Name = "LoginForm";
@@ -127,7 +128,7 @@
 
         private Label label1;
         private TextBox txtUsername;
-        private TextBox textBox1;
+        private TextBox txtPassword;
         private CheckBox checkBox1;
         private Button btnLogin;
         private Label label2;

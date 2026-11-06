@@ -29,7 +29,7 @@ namespace TugasKelompokHayyuk.Views
         private void btnLogin_Click(object sender, EventArgs e)
         {
            UserService userService = new UserService();
-            userService.UserRegister(txtUsername.Text.Trim(), txtEmail.Text.Trim(), txtFullname.Text.Trim(), txtPssword.Text.Trim(),cmbRole.Text);
+            userService.UserRegister(txtUsername.Text.Trim(), txtEmail.Text.Trim(), txtFullname.Text.Trim(), txtPssword.Text.Trim(),cmbRole.Text,this);
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

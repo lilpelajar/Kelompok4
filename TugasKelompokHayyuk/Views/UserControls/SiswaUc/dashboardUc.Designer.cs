@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel10 = new Panel();
             dataGridView1 = new DataGridView();
             label2 = new Label();
@@ -36,8 +36,11 @@
             label5 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
+            label10 = new Label();
             panel1 = new Panel();
+            label8 = new Label();
             panel2 = new Panel();
+            label9 = new Label();
             label1 = new Label();
             monthCalendar1 = new MonthCalendar();
             panel4 = new Panel();
@@ -48,9 +51,6 @@
             label6 = new Label();
             panel7 = new Panel();
             label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel8.SuspendLayout();
@@ -81,14 +81,14 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.FromArgb(4, 45, 99);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(3, 77);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -154,6 +154,18 @@
             panel3.Size = new Size(198, 154);
             panel3.TabIndex = 2;
             // 
+            // label10
+            // 
+            label10.Dock = DockStyle.Top;
+            label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(0, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(198, 40);
+            label10.TabIndex = 0;
+            label10.Text = "CGPA";
+            label10.TextAlign = ContentAlignment.BottomCenter;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(16, 27, 57);
@@ -163,6 +175,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(197, 154);
             panel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            label8.Dock = DockStyle.Top;
+            label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(0, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(197, 40);
+            label8.TabIndex = 3;
+            label8.Text = "Level";
+            label8.TextAlign = ContentAlignment.BottomCenter;
             // 
             // panel2
             // 
@@ -174,15 +198,27 @@
             panel2.Size = new Size(197, 154);
             panel2.TabIndex = 1;
             // 
+            // label9
+            // 
+            label9.Dock = DockStyle.Top;
+            label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(0, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(197, 40);
+            label9.TabIndex = 0;
+            label9.Text = "Courses";
+            label9.TextAlign = ContentAlignment.BottomCenter;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 3);
             label1.Name = "label1";
-            label1.Size = new Size(287, 31);
+            label1.Size = new Size(242, 31);
             label1.TabIndex = 0;
-            label1.Text = "Good Morning, khon Tolle";
+            label1.Text = "Good Morning, Drake";
             // 
             // monthCalendar1
             // 
@@ -267,42 +303,6 @@
             label7.Size = new Size(111, 25);
             label7.TabIndex = 5;
             label7.Text = "Assignment";
-            // 
-            // label8
-            // 
-            label8.Dock = DockStyle.Top;
-            label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(0, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(197, 40);
-            label8.TabIndex = 3;
-            label8.Text = "Level";
-            label8.TextAlign = ContentAlignment.BottomCenter;
-            // 
-            // label9
-            // 
-            label9.Dock = DockStyle.Top;
-            label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(0, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(197, 40);
-            label9.TabIndex = 0;
-            label9.Text = "Courses";
-            label9.TextAlign = ContentAlignment.BottomCenter;
-            // 
-            // label10
-            // 
-            label10.Dock = DockStyle.Top;
-            label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(0, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(198, 40);
-            label10.TabIndex = 0;
-            label10.Text = "CGPA";
-            label10.TextAlign = ContentAlignment.BottomCenter;
             // 
             // dashboardUc
             // 
