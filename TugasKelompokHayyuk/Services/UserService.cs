@@ -9,7 +9,7 @@ using TugasKelompokHayyuk.Repository;
 
 namespace TugasKelompokHayyuk.Services
 {
-    public class UserService
+    public class UserService 
     {
         SignupRepo SignupRepo = new SignupRepo();
         public bool UserRegister (string username, string email, string fullname,string password, string role)
@@ -45,6 +45,17 @@ namespace TugasKelompokHayyuk.Services
                 MessageBox.Show("nda berhasil ki terdaftar", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return IsSucces;
+        }
+
+        public bool UserLogin(string username, string password)
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("username, email, fullname, password, atau role belum diisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            UserModels userModels = new UserModels();
+            bool pw = BCrypt.Net.BCrypt.Verify(password, userModels.Password);
+            return true;
         }
 
        
