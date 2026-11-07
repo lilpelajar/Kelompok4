@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace TugasKelompokHayyuk.Views
             labelOff.BackColor = (Color)color;
             labelOff.ForeColor = Color.White;
         }
-        
+
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             dashboardUc dashboardUc = new dashboardUc();
@@ -40,6 +41,17 @@ namespace TugasKelompokHayyuk.Views
             pnlMain.Controls.Add(dashboardUc);
             dashboardUc.Dock = DockStyle.Top;
             ButtonOn(btnDashboard);
+            ButtonOff(btnCourses);
         }
-    }   
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            CoursesUc coursesUc = new CoursesUc();
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(coursesUc);
+            coursesUc.Dock = DockStyle.Top;
+            ButtonOn(btnCourses);
+            ButtonOff(btnDashboard);
+        }
+    }
 }

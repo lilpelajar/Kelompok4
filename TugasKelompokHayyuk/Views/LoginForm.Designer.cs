@@ -62,6 +62,7 @@
             txtPassword.Font = new Font("Segoe UI", 12F);
             txtPassword.Location = new Point(76, 175);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(345, 34);
             txtPassword.TabIndex = 2;
@@ -75,6 +76,7 @@
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Show password";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // btnLogin
             // 

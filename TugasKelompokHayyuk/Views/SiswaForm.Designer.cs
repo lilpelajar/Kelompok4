@@ -211,6 +211,7 @@
             btnCourses.TabIndex = 0;
             btnCourses.Text = "Courses";
             btnCourses.TextAlign = ContentAlignment.MiddleCenter;
+            btnCourses.Click += btnCourses_Click;
             // 
             // panel3
             // 

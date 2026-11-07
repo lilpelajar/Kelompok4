@@ -78,6 +78,7 @@
             txtPssword.Font = new Font("Segoe UI", 12F);
             txtPssword.Location = new Point(76, 245);
             txtPssword.Name = "txtPssword";
+            txtPssword.PasswordChar = '*';
             txtPssword.PlaceholderText = "Password";
             txtPssword.Size = new Size(345, 34);
             txtPssword.TabIndex = 9;
@@ -139,6 +140,7 @@
             chkShowPassword.TabIndex = 17;
             chkShowPassword.Text = "Show Password";
             chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // label3
             // 
