@@ -16,8 +16,6 @@ namespace TugasKelompokHayyuk.Services
         LoginRepo LoginRepo = new LoginRepo();
 
         //forms
-        LoginForm LoginForm = new LoginForm();
-        RegistrationForm RegistrationForm = new RegistrationForm();
         AdminForm AdminForm = new AdminForm();
         GuruForm GuruForm = new GuruForm();
         SiswaForm SiswaForm = new SiswaForm();
@@ -76,12 +74,12 @@ namespace TugasKelompokHayyuk.Services
             return IsSucces;
         }
 
-        public bool UserLogin(string username, string password, Form form)
+        public bool UserLogin (string username, string password, Form form)
         {
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("username atau password blm diisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+               return false;
             }
             UserModels userModels = new UserModels
             {
@@ -98,7 +96,7 @@ namespace TugasKelompokHayyuk.Services
             if (!pwuser)
             {
                 MessageBox.Show("salah pw nu woi", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return true;
             }
             switch (userModels.RoleUser)
             {
@@ -112,9 +110,10 @@ namespace TugasKelompokHayyuk.Services
                     LoadFormRoleBased(form, SiswaForm);
                     break;
             }
+            
             return true;
         }
-
+        
        
     }
 }

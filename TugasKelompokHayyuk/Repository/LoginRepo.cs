@@ -11,7 +11,6 @@ namespace TugasKelompokHayyuk.Repository
     public class LoginRepo : database
     {
         
-
         public bool UserLogin (UserModels userModels)
         {
             using (var conn = MyConnection())
