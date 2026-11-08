@@ -89,11 +89,11 @@
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.Location = new Point(6, 77);
+            dataGridView1.Location = new Point(3, 54);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(607, 199);
+            dataGridView1.Size = new Size(607, 222);
             dataGridView1.TabIndex = 3;
             // 
             // label2
@@ -272,7 +272,7 @@
             panel6.Controls.Add(label6);
             panel6.Location = new Point(16, 569);
             panel6.Name = "panel6";
-            panel6.Size = new Size(308, 324);
+            panel6.Size = new Size(318, 324);
             panel6.TabIndex = 11;
             // 
             // label6
@@ -289,9 +289,9 @@
             // 
             panel7.BackColor = Color.White;
             panel7.Controls.Add(label7);
-            panel7.Location = new Point(350, 569);
+            panel7.Location = new Point(345, 569);
             panel7.Name = "panel7";
-            panel7.Size = new Size(279, 324);
+            panel7.Size = new Size(284, 324);
             panel7.TabIndex = 12;
             // 
             // label7
