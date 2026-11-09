@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using TugasKelompokHayyuk.Config;
 using TugasKelompokHayyuk.Models;
@@ -13,6 +14,7 @@ namespace TugasKelompokHayyuk.Repository
         
         public bool UserLogin (UserModels userModels)
         {
+            string student_number = "544251100";
             using (var conn = MyConnection())
             {
                 conn.Open();
@@ -29,7 +31,7 @@ namespace TugasKelompokHayyuk.Repository
                             userModels.Password = reader.GetString("password_hash");
                             userModels.RoleUser = reader.GetString("role_enum");
                             return true;
-                        }
+                        } 
                     }
                 }
             }

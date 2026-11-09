@@ -37,6 +37,7 @@ namespace TugasKelompokHayyuk.Services
                 )
             {
                 MessageBox.Show("username, email, fullname, password, atau role belum diisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
 
             string pwhashed = BCrypt.Net.BCrypt.HashPassword(password);
@@ -50,27 +51,37 @@ namespace TugasKelompokHayyuk.Services
                 RoleUser = role
             };
 
-            bool IsSucces = SignupRepo.AddUser(userModels);
+            bool IsSucces =false;
+
+            if (userModels.RoleUser == "Siswa")
+            {
+                IsSucces = SignupRepo.RegistStudent(userModels);
+            } else
+            {
+                IsSucces = SignupRepo.AddUser(userModels);
+            }
+
             if (IsSucces)
             {
-                MessageBox.Show("berhasil ji twerdatar", "informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Terdaftar mi.", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                switch (userModels.RoleUser)
+                {
+                    case "Admin":
+                        LoadFormRoleBased(form, AdminForm);
+                        break;
+                    case "Guru":
+                        LoadFormRoleBased(form, GuruForm);
+                        break;
+                    case "Siswa":
+                        LoadFormRoleBased(form, SiswaForm);
+                        break;
+                }
             }
-            else
+            else 
             {
-                MessageBox.Show("nda berhasil ki terdaftar", "peringatan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("error skibidi", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            switch (userModels.RoleUser)
-            {
-                case "Admin":
-                    LoadFormRoleBased(form, AdminForm);
-                    break;
-                case "Guru":
-                    LoadFormRoleBased(form, GuruForm);
-                    break;
-                case "Siswa":
-                    LoadFormRoleBased(form, SiswaForm);
-                    break;
-            }
+            
             return IsSucces;
         }
 
@@ -96,7 +107,7 @@ namespace TugasKelompokHayyuk.Services
             if (!pwuser)
             {
                 MessageBox.Show("salah pw nu woi", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return true;
+                return false;
             }
             switch (userModels.RoleUser)
             {
@@ -115,5 +126,6 @@ namespace TugasKelompokHayyuk.Services
         }
         
        
+      
     }
 }
