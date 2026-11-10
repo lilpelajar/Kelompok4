@@ -56,6 +56,10 @@ namespace TugasKelompokHayyuk.Services
             if (userModels.RoleUser == "Siswa")
             {
                 IsSucces = SignupRepo.RegistStudent(userModels);
+            }
+            else if (userModels.RoleUser == "Guru")
+            {
+                IsSucces = SignupRepo.RegistTeachers(userModels);
             } else
             {
                 IsSucces = SignupRepo.AddUser(userModels);
@@ -81,7 +85,6 @@ namespace TugasKelompokHayyuk.Services
             {
                 MessageBox.Show("error skibidi", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
             return IsSucces;
         }
 
@@ -124,8 +127,5 @@ namespace TugasKelompokHayyuk.Services
             
             return true;
         }
-        
-       
-      
     }
 }

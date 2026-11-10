@@ -14,7 +14,6 @@ namespace TugasKelompokHayyuk.Repository
         
         public bool UserLogin (UserModels userModels)
         {
-            string student_number = "544251100";
             using (var conn = MyConnection())
             {
                 conn.Open();

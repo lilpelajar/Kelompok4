@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel10 = new Panel();
             dataGridView1 = new DataGridView();
             label2 = new Label();
@@ -51,6 +51,8 @@
             label6 = new Label();
             panel7 = new Panel();
             label7 = new Label();
+            label11 = new Label();
+            lblLevel = new Label();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel8.SuspendLayout();
@@ -81,14 +83,14 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.FromArgb(4, 45, 99);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(3, 54);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -109,6 +111,7 @@
             // panel8
             // 
             panel8.BackColor = Color.White;
+            panel8.Controls.Add(label11);
             panel8.Controls.Add(label5);
             panel8.Controls.Add(tableLayoutPanel1);
             panel8.Controls.Add(label1);
@@ -169,12 +172,14 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(16, 27, 57);
+            panel1.Controls.Add(lblLevel);
             panel1.Controls.Add(label8);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(197, 154);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // label8
             // 
@@ -184,7 +189,7 @@
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
             label8.Size = new Size(197, 40);
-            label8.TabIndex = 3;
+            label8.TabIndex = 1;
             label8.Text = "Level";
             label8.TextAlign = ContentAlignment.BottomCenter;
             // 
@@ -216,9 +221,9 @@
             label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 3);
             label1.Name = "label1";
-            label1.Size = new Size(242, 31);
+            label1.Size = new Size(180, 31);
             label1.TabIndex = 0;
-            label1.Text = "Good Morning, Drake";
+            label1.Text = "Good Morning, ";
             // 
             // monthCalendar1
             // 
@@ -293,6 +298,7 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(284, 324);
             panel7.TabIndex = 12;
+            panel7.Paint += panel7_Paint;
             // 
             // label7
             // 
@@ -303,6 +309,27 @@
             label7.Size = new Size(111, 25);
             label7.TabIndex = 5;
             label7.Text = "Assignment";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(170, 3);
+            label11.Name = "label11";
+            label11.Size = new Size(118, 31);
+            label11.TabIndex = 3;
+            label11.Text = "Username";
+            // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLevel.ForeColor = Color.White;
+            lblLevel.Location = new Point(71, 77);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(62, 23);
+            lblLevel.TabIndex = 2;
+            lblLevel.Text = "label12";
             // 
             // dashboardUc
             // 
@@ -325,6 +352,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -358,8 +386,10 @@
         private Panel panel7;
         private Label label6;
         private Label label7;
-        private Label label8;
         private Label label9;
         private Label label10;
+        private Label label8;
+        private Label label11;
+        private Label lblLevel;
     }
 }

@@ -1,9 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Security;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Channels;
 using TugasKelompokHayyuk.Config;
 using TugasKelompokHayyuk.Models;
 
@@ -99,6 +101,61 @@ namespace TugasKelompokHayyuk.Repository
                         return false;
                     }
                     
+                }
+            }
+        }
+
+        public bool RegistTeachers(UserModels userModels)
+        {
+            using(var conn = MyConnection())
+            {
+                conn.Open();
+                using(MySqlTransaction transaction = conn.BeginTransaction())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Transaction = transaction;
+                        try
+                        {
+                            cmd.CommandText = @"insert into users (username, email, password_hash, full_name, role_enum)
+                                 values (@username, @email, @password_hash, @full_name, @role_enum);
+                                 select last_insert_id()";
+                            cmd.Parameters.AddWithValue("@username",userModels.Username);
+                            cmd.Parameters.AddWithValue("@email", userModels.Email);
+                            cmd.Parameters.AddWithValue("@password_hash", userModels.Password);
+                            cmd.Parameters.AddWithValue("@full_name", userModels.FullName);
+                            cmd.Parameters.AddWithValue("@role_enum", userModels.RoleUser);
+                            
+                            long userid = Convert.ToInt64(cmd.ExecuteScalar());
+                            string teachernumb = "";
+
+                            cmd.CommandText = @"select teacher_number from teachers order by teacher_number desc limit 1";
+                            object anu = cmd.ExecuteScalar();
+                            if (anu != null && anu != DBNull.Value)
+                            {
+                                string convert = anu.ToString();
+                                if (long.TryParse(convert, out long itulah))
+                                {
+                                    long bagogo = itulah + 1;
+                                    teachernumb = bagogo.ToString();
+                                }
+                            }
+
+                            cmd.CommandText = @"insert into teachers (user_id, teacher_number) values (@user_id, @teacher_number)";
+                            cmd.Parameters.AddWithValue("@user_id", userid);
+                            cmd.Parameters.AddWithValue("@teacher_number", teachernumb);
+                            cmd.ExecuteNonQuery();
+
+                            transaction.Commit();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("error occurred: " + ex);
+                            return false;
+                        }
+                    }
                 }
             }
         }
