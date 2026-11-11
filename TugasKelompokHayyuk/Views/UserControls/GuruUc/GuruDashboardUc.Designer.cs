@@ -39,21 +39,20 @@
             lblWelcomeTeacher = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            panel1 = new Panel();
-            label3 = new Label();
-            panel2 = new Panel();
-            label4 = new Label();
-            panel3 = new Panel();
-            label5 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
             panel4 = new Panel();
             label6 = new Label();
             dgvSchedules = new DataGridView();
             panel5 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel8 = new Panel();
+            label12 = new Label();
+            pictureBox4 = new PictureBox();
             panel7 = new Panel();
+            label11 = new Label();
+            pictureBox3 = new PictureBox();
             panel6 = new Panel();
+            label10 = new Label();
+            pictureBox2 = new PictureBox();
             label7 = new Label();
             panel9 = new Panel();
             dgvCoursesTable = new DataGridView();
@@ -61,19 +60,34 @@
             panel10 = new Panel();
             dataGridView1 = new DataGridView();
             label9 = new Label();
+            panel11 = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
+            label3 = new Label();
+            panel3 = new Panel();
+            label5 = new Label();
+            panel2 = new Panel();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSchedules).BeginInit();
             panel5.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).BeginInit();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel11.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -117,92 +131,12 @@
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(15, 46, 87);
-            panel1.Controls.Add(label3);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(291, 171);
-            panel1.TabIndex = 4;
-            // 
-            // label3
-            // 
-            label3.Dock = DockStyle.Top;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(291, 34);
-            label3.TabIndex = 5;
-            label3.Text = "Teaching Schedules";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(15, 46, 87);
-            panel2.Controls.Add(label4);
-            panel2.Location = new Point(300, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(291, 171);
-            panel2.TabIndex = 6;
-            // 
-            // label4
-            // 
-            label4.Dock = DockStyle.Top;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(291, 34);
-            label4.TabIndex = 5;
-            label4.Text = "Not Graded";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            label4.Click += label4_Click;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(15, 46, 87);
-            panel3.Controls.Add(label5);
-            panel3.Location = new Point(597, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(292, 171);
-            panel3.TabIndex = 7;
-            // 
-            // label5
-            // 
-            label5.Dock = DockStyle.Top;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(292, 34);
-            label5.TabIndex = 5;
-            label5.Text = "Attendance";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.4080734F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.2959633F));
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel3, 2, 0);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(9, 146);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(892, 177);
-            tableLayoutPanel1.TabIndex = 8;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(label6);
             panel4.Controls.Add(dgvSchedules);
-            panel4.Location = new Point(9, 342);
+            panel4.Location = new Point(9, 364);
             panel4.Name = "panel4";
             panel4.Size = new Size(563, 226);
             panel4.TabIndex = 9;
@@ -256,10 +190,11 @@
             panel5.BackColor = Color.FromArgb(15, 46, 87);
             panel5.Controls.Add(tableLayoutPanel2);
             panel5.Controls.Add(label7);
-            panel5.Location = new Point(590, 343);
+            panel5.Location = new Point(590, 365);
             panel5.Name = "panel5";
             panel5.Size = new Size(311, 226);
             panel5.TabIndex = 10;
+            panel5.Paint += panel5_Paint;
             // 
             // tableLayoutPanel2
             // 
@@ -268,50 +203,113 @@
             tableLayoutPanel2.Controls.Add(panel8, 0, 2);
             tableLayoutPanel2.Controls.Add(panel7, 0, 1);
             tableLayoutPanel2.Controls.Add(panel6, 0, 0);
-            tableLayoutPanel2.Location = new Point(8, 31);
+            tableLayoutPanel2.Location = new Point(0, 28);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Size = new Size(295, 186);
+            tableLayoutPanel2.Size = new Size(311, 198);
             tableLayoutPanel2.TabIndex = 7;
             // 
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(168, 199, 240);
+            panel8.Controls.Add(label12);
+            panel8.Controls.Add(pictureBox4);
             panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(3, 127);
+            panel8.Location = new Point(3, 133);
             panel8.Name = "panel8";
-            panel8.Size = new Size(289, 56);
+            panel8.Size = new Size(305, 62);
             panel8.TabIndex = 2;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(58, 16);
+            label12.Name = "label12";
+            label12.Size = new Size(109, 28);
+            label12.TabIndex = 5;
+            label12.Text = "Add Grade";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.White;
+            pictureBox4.Location = new Point(8, 12);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(40, 40);
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
             // 
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(168, 199, 240);
+            panel7.Controls.Add(label11);
+            panel7.Controls.Add(pictureBox3);
             panel7.Dock = DockStyle.Fill;
-            panel7.Location = new Point(3, 65);
+            panel7.Location = new Point(3, 68);
             panel7.Name = "panel7";
-            panel7.Size = new Size(289, 56);
+            panel7.Size = new Size(305, 59);
             panel7.TabIndex = 1;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(56, 15);
+            label11.Name = "label11";
+            label11.Size = new Size(146, 28);
+            label11.TabIndex = 3;
+            label11.Text = "Upload Lesson";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.White;
+            pictureBox3.Location = new Point(8, 9);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(40, 40);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
             // 
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(168, 199, 240);
+            panel6.Controls.Add(label10);
+            panel6.Controls.Add(pictureBox2);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(289, 56);
+            panel6.Size = new Size(305, 59);
             panel6.TabIndex = 0;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(56, 14);
+            label10.Name = "label10";
+            label10.Size = new Size(115, 28);
+            label10.TabIndex = 1;
+            label10.Text = "Create Task";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Location = new Point(8, 8);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(40, 40);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // label7
             // 
-            label7.AutoSize = true;
+            label7.Dock = DockStyle.Top;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(3, 0);
+            label7.Location = new Point(0, 0);
             label7.Name = "label7";
-            label7.Size = new Size(128, 28);
+            label7.Size = new Size(311, 28);
             label7.TabIndex = 6;
             label7.Text = "Quick Action";
             // 
@@ -320,7 +318,7 @@
             panel9.BackColor = Color.White;
             panel9.Controls.Add(dgvCoursesTable);
             panel9.Controls.Add(label8);
-            panel9.Location = new Point(9, 588);
+            panel9.Location = new Point(9, 610);
             panel9.Name = "panel9";
             panel9.Size = new Size(338, 615);
             panel9.TabIndex = 11;
@@ -378,7 +376,7 @@
             panel10.BackColor = Color.White;
             panel10.Controls.Add(dataGridView1);
             panel10.Controls.Add(label9);
-            panel10.Location = new Point(375, 588);
+            panel10.Location = new Point(375, 610);
             panel10.Name = "panel10";
             panel10.Size = new Size(526, 615);
             panel10.TabIndex = 13;
@@ -429,15 +427,103 @@
             label9.Text = "Students";
             label9.TextAlign = ContentAlignment.BottomCenter;
             // 
+            // panel11
+            // 
+            panel11.BackColor = Color.White;
+            panel11.Controls.Add(tableLayoutPanel1);
+            panel11.Location = new Point(12, 128);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(889, 215);
+            panel11.TabIndex = 14;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.4080734F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.2959633F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel3, 2, 0);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
+            tableLayoutPanel1.Location = new Point(16, 16);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(856, 179);
+            tableLayoutPanel1.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(15, 46, 87);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(279, 171);
+            panel1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.Dock = DockStyle.Top;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(279, 34);
+            label3.TabIndex = 5;
+            label3.Text = "Teaching Schedules";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(15, 46, 87);
+            panel3.Controls.Add(label5);
+            panel3.Location = new Point(573, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(280, 171);
+            panel3.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.Dock = DockStyle.Top;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(0, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(280, 34);
+            label5.TabIndex = 5;
+            label5.Text = "Attendance";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(15, 46, 87);
+            panel2.Controls.Add(label4);
+            panel2.Location = new Point(288, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(279, 171);
+            panel2.TabIndex = 6;
+            // 
+            // label4
+            // 
+            label4.Dock = DockStyle.Top;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(279, 34);
+            label4.TabIndex = 5;
+            label4.Text = "Not Graded";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // GuruDashboardUc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel11);
             Controls.Add(panel10);
             Controls.Add(panel9);
             Controls.Add(panel5);
             Controls.Add(panel4);
-            Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(lblWelcomeTeacher);
@@ -446,20 +532,29 @@
             Size = new Size(916, 1236);
             Load += GuruDashboardUc_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSchedules).EndInit();
             panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).EndInit();
             panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel11.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -470,13 +565,6 @@
         private Label lblWelcomeTeacher;
         private Label label2;
         private PictureBox pictureBox1;
-        private Panel panel1;
-        private Label label3;
-        private Panel panel2;
-        private Label label4;
-        private Panel panel3;
-        private Label label5;
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel panel4;
         private DataGridView dgvSchedules;
         private Label label6;
@@ -492,5 +580,19 @@
         private Panel panel10;
         private DataGridView dataGridView1;
         private Label label9;
+        private Panel panel11;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
+        private Label label3;
+        private Panel panel3;
+        private Label label5;
+        private Panel panel2;
+        private Label label4;
+        private Label label11;
+        private PictureBox pictureBox3;
+        private Label label10;
+        private PictureBox pictureBox2;
+        private Label label12;
+        private PictureBox pictureBox4;
     }
 }
