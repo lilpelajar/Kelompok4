@@ -28,18 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel10 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvCoursesTable = new DataGridView();
             label2 = new Label();
             panel8 = new Panel();
+            lblUsername = new Label();
             label5 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
+            label13 = new Label();
             label10 = new Label();
             panel1 = new Panel();
+            lblLevel = new Label();
             label8 = new Label();
             panel2 = new Panel();
+            label12 = new Label();
             label9 = new Label();
             label1 = new Label();
             monthCalendar1 = new MonthCalendar();
@@ -51,10 +56,8 @@
             label6 = new Label();
             panel7 = new Panel();
             label7 = new Label();
-            label11 = new Label();
-            lblLevel = new Label();
             panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).BeginInit();
             panel8.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -69,34 +72,46 @@
             // panel10
             // 
             panel10.BackColor = Color.White;
-            panel10.Controls.Add(dataGridView1);
+            panel10.Controls.Add(dgvCoursesTable);
             panel10.Controls.Add(label2);
             panel10.Location = new Point(16, 275);
             panel10.Name = "panel10";
-            panel10.Size = new Size(613, 279);
+            panel10.Size = new Size(613, 240);
             panel10.TabIndex = 8;
             // 
-            // dataGridView1
+            // dgvCoursesTable
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.FromArgb(4, 45, 99);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(3, 54);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(607, 222);
-            dataGridView1.TabIndex = 3;
+            dgvCoursesTable.AllowUserToAddRows = false;
+            dgvCoursesTable.AllowUserToDeleteRows = false;
+            dgvCoursesTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvCoursesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCoursesTable.BackgroundColor = Color.FromArgb(4, 45, 99);
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(15, 46, 87);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvCoursesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(31, 92, 173);
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvCoursesTable.Location = new Point(3, 54);
+            dgvCoursesTable.Name = "dgvCoursesTable";
+            dgvCoursesTable.ReadOnly = true;
+            dgvCoursesTable.RowHeadersVisible = false;
+            dgvCoursesTable.RowHeadersWidth = 51;
+            dgvCoursesTable.ScrollBars = ScrollBars.None;
+            dgvCoursesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCoursesTable.Size = new Size(607, 183);
+            dgvCoursesTable.TabIndex = 3;
             // 
             // label2
             // 
@@ -104,14 +119,14 @@
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(3, 3);
             label2.Name = "label2";
-            label2.Size = new Size(136, 25);
+            label2.Size = new Size(143, 25);
             label2.TabIndex = 2;
-            label2.Text = "Today's Classes";
+            label2.Text = "Today's Courses";
             // 
             // panel8
             // 
             panel8.BackColor = Color.White;
-            panel8.Controls.Add(label11);
+            panel8.Controls.Add(lblUsername);
             panel8.Controls.Add(label5);
             panel8.Controls.Add(tableLayoutPanel1);
             panel8.Controls.Add(label1);
@@ -119,6 +134,16 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(613, 245);
             panel8.TabIndex = 7;
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.Location = new Point(170, 3);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(118, 31);
+            lblUsername.TabIndex = 3;
+            lblUsername.Text = "Username";
             // 
             // label5
             // 
@@ -150,12 +175,25 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(16, 27, 57);
+            panel3.Controls.Add(label13);
             panel3.Controls.Add(label10);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(409, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(198, 154);
             panel3.TabIndex = 2;
+            // 
+            // label13
+            // 
+            label13.Dock = DockStyle.Fill;
+            label13.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(0, 40);
+            label13.Name = "label13";
+            label13.Size = new Size(198, 114);
+            label13.TabIndex = 4;
+            label13.Text = "label13";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -166,7 +204,7 @@
             label10.Name = "label10";
             label10.Size = new Size(198, 40);
             label10.TabIndex = 0;
-            label10.Text = "CGPA";
+            label10.Text = "Grade";
             label10.TextAlign = ContentAlignment.BottomCenter;
             // 
             // panel1
@@ -180,6 +218,18 @@
             panel1.Size = new Size(197, 154);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // lblLevel
+            // 
+            lblLevel.Dock = DockStyle.Fill;
+            lblLevel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLevel.ForeColor = Color.White;
+            lblLevel.Location = new Point(0, 40);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(197, 114);
+            lblLevel.TabIndex = 2;
+            lblLevel.Text = "label12";
+            lblLevel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -196,12 +246,25 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(16, 27, 57);
+            panel2.Controls.Add(label12);
             panel2.Controls.Add(label9);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(206, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(197, 154);
             panel2.TabIndex = 1;
+            // 
+            // label12
+            // 
+            label12.Dock = DockStyle.Fill;
+            label12.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(0, 40);
+            label12.Name = "label12";
+            label12.Size = new Size(197, 114);
+            label12.TabIndex = 3;
+            label12.Text = "label12";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -247,9 +310,9 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(3, 2);
             label3.Name = "label3";
-            label3.Size = new Size(136, 25);
+            label3.Size = new Size(143, 25);
             label3.TabIndex = 3;
-            label3.Text = "Today's Classes";
+            label3.Text = "Today's Courses";
             // 
             // panel5
             // 
@@ -275,7 +338,7 @@
             // 
             panel6.BackColor = Color.White;
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(16, 569);
+            panel6.Location = new Point(16, 526);
             panel6.Name = "panel6";
             panel6.Size = new Size(318, 324);
             panel6.TabIndex = 11;
@@ -294,7 +357,7 @@
             // 
             panel7.BackColor = Color.White;
             panel7.Controls.Add(label7);
-            panel7.Location = new Point(345, 569);
+            panel7.Location = new Point(345, 526);
             panel7.Name = "panel7";
             panel7.Size = new Size(284, 324);
             panel7.TabIndex = 12;
@@ -310,27 +373,6 @@
             label7.TabIndex = 5;
             label7.Text = "Assignment";
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(170, 3);
-            label11.Name = "label11";
-            label11.Size = new Size(118, 31);
-            label11.TabIndex = 3;
-            label11.Text = "Username";
-            // 
-            // lblLevel
-            // 
-            lblLevel.AutoSize = true;
-            lblLevel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLevel.ForeColor = Color.White;
-            lblLevel.Location = new Point(71, 77);
-            lblLevel.Name = "lblLevel";
-            lblLevel.Size = new Size(62, 23);
-            lblLevel.TabIndex = 2;
-            lblLevel.Text = "label12";
-            // 
             // dashboardUc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -344,15 +386,15 @@
             Controls.Add(monthCalendar1);
             Name = "dashboardUc";
             Size = new Size(916, 917);
+            Load += dashboardUc_Load;
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -375,7 +417,7 @@
         private Panel panel2;
         private Panel panel1;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvCoursesTable;
         private Label label2;
         private Panel panel4;
         private Label label5;
@@ -389,7 +431,9 @@
         private Label label9;
         private Label label10;
         private Label label8;
-        private Label label11;
+        private Label lblUsername;
         private Label lblLevel;
+        private Label label13;
+        private Label label12;
     }
 }

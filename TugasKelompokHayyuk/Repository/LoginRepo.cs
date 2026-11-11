@@ -11,8 +11,8 @@ namespace TugasKelompokHayyuk.Repository
 {
     public class LoginRepo : database
     {
-        
-        public bool UserLogin (UserModels userModels)
+
+        public bool UserLogin(UserModels userModels)
         {
             using (var conn = MyConnection())
             {
@@ -21,16 +21,18 @@ namespace TugasKelompokHayyuk.Repository
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", userModels.Username);
+
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
+
                             userModels.Id = reader.GetInt64("id");
                             userModels.Username = reader.GetString("username");
                             userModels.Password = reader.GetString("password_hash");
                             userModels.RoleUser = reader.GetString("role_enum");
                             return true;
-                        } 
+                        }
                     }
                 }
             }
@@ -38,3 +40,6 @@ namespace TugasKelompokHayyuk.Repository
         }
     }
 }
+
+    
+    
