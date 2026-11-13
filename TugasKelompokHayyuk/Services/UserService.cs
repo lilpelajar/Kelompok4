@@ -3,6 +3,7 @@ using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using TugasKelompokHayyuk.Models;
 using TugasKelompokHayyuk.Repository;
@@ -18,7 +19,7 @@ namespace TugasKelompokHayyuk.Services
         //forms
         AdminForm AdminForm = new AdminForm();
         GuruForm GuruForm = new GuruForm();
-        SiswaForm SiswaForm = new SiswaForm();
+    
         
 
         private void LoadFormRoleBased(Form form1, Form form2)
@@ -68,6 +69,7 @@ namespace TugasKelompokHayyuk.Services
             if (IsSucces)
             {
                 MessageBox.Show("Terdaftar mi.", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form formtrgt = null;
                 switch (userModels.RoleUser)
                 {
                     case "Admin":
@@ -77,11 +79,15 @@ namespace TugasKelompokHayyuk.Services
                         LoadFormRoleBased(form, GuruForm);
                         break;
                     case "Siswa":
-                        LoadFormRoleBased(form, SiswaForm);
+                        formtrgt = new SiswaForm(userModels);
                         break;
                 }
+                if (formtrgt !=null)
+                {
+                    LoadFormRoleBased(form, formtrgt);
+                }
             }
-            else 
+            else
             {
                 MessageBox.Show("error skibidi", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -112,6 +118,8 @@ namespace TugasKelompokHayyuk.Services
                 MessageBox.Show("salah pw nu woi", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            Form formtrgt = null;
+           
             switch (userModels.RoleUser)
             {
                 case "Admin":
@@ -121,8 +129,12 @@ namespace TugasKelompokHayyuk.Services
                     LoadFormRoleBased(form, GuruForm);
                     break;
                 case "Siswa":
-                    LoadFormRoleBased(form, SiswaForm);
+                    formtrgt = new SiswaForm(userModels);
                     break;
+            }
+            if (formtrgt != null)
+            {
+                LoadFormRoleBased(form, formtrgt);
             }
             
             return true;

@@ -1,4 +1,5 @@
-﻿using TugasKelompokHayyuk.Repository.Voids;
+﻿using TugasKelompokHayyuk.Models;
+using TugasKelompokHayyuk.Repository.Voids;
 using TugasKelompokHayyuk.Views.UserControls.SiswaUc;
 
 namespace TugasKelompokHayyuk.Views
@@ -6,12 +7,13 @@ namespace TugasKelompokHayyuk.Views
     public partial class SiswaForm : Form
     {
         VoidsAll VoidsAll = new VoidsAll();
-        public SiswaForm()
+        private UserModels user;
+        public SiswaForm(UserModels userModels)
         {
             InitializeComponent();
-         
-            
+            user = userModels;
         }
+
         private void SiswaForm_Load(object sender, EventArgs e)
         {
             btnDashboard_Click(sender, e);
@@ -21,6 +23,7 @@ namespace TugasKelompokHayyuk.Views
         {
             
             dashboardUc dashboardUc = new dashboardUc();
+            dashboardUc.LoginUser = user;
             VoidsAll.getUserControl(pnlMain, dashboardUc);
             VoidsAll.buttonOnOff(btnDashboard, btnCourses, btnCalendar, btnGrades);
             

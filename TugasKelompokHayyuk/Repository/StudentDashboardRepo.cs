@@ -5,27 +5,38 @@
     using System.Diagnostics.SymbolStore;
     using System.Text;
     using TugasKelompokHayyuk.Config;
+using TugasKelompokHayyuk.Models;
 
-    namespace TugasKelompokHayyuk.Repository
+namespace TugasKelompokHayyuk.Repository
     {
         public class StudentDashboardRepo : database
         {
-            public DataTable ReadTableClasses()
+          
+            public DataTable ReadTableClasses(string username)
             {
                 DataTable dataTable = new DataTable();
                 using (var conn = MyConnection())
                 {
-                    string query = @" select subjects.subject_code, subjects.subject_name, teachers.teacher_number
-                                      from teacher_subject
-                                      join teachers on teacher_subject.teacher_id = teachers.id
-                                      join subjects on teacher_subject.subject_id = subjects.id;";
-                    using(MySqlDataAdapter adapter = new MySqlDataAdapter(query,conn))
+                    string query = @"SELECT subjects.subject_name, grades.score, users.full_name AS Teacher_Name
+                                    FROM grades
+                                    JOIN teacher_subject ON grades.teacher_subject_id = teacher_subject.id
+                                    JOIN subjects ON teacher_subject.subject_id = subjects.id
+                                    JOIN teachers ON teacher_subject.teacher_id = teachers.id
+                                    JOIN users ON teachers.user_id = users.id
+                                    JOIN students ON grades.student_id = students.id
+                                    JOIN users AS student_user ON students.user_id = student_user.id
+                                    WHERE student_user.username = @username;";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                     {
                         adapter.Fill(dataTable);
                     }
                 }
+            }
                 return dataTable;
             }
-
         }
     }

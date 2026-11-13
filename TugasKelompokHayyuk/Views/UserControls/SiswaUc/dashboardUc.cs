@@ -35,10 +35,10 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
 
         private void dashboardUc_Load(object sender, EventArgs e)
         {
-            dgvCoursesTable.DataSource = studentDashboardRepo.ReadTableClasses();
-            dgvCoursesTable.Columns[0].HeaderText = "Subject Code";
-            dgvCoursesTable.Columns[1].HeaderText = "Subject Name";
-            dgvCoursesTable.Columns[2].HeaderText = "Teacher Code";
+            dgvCoursesTable.DataSource = studentDashboardRepo.ReadTableClasses(LoginUser.Username);
+            dgvCoursesTable.Columns[0].HeaderText = "Subject Name";
+            dgvCoursesTable.Columns[1].HeaderText = "Score";
+            dgvCoursesTable.Columns[2].HeaderText = "Teacher Name";
         }
     }
 }
