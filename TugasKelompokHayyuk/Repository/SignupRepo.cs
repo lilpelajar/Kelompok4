@@ -117,31 +117,36 @@ namespace TugasKelompokHayyuk.Repository
                         cmd.Transaction = transaction;
                         try
                         {
+                            long userid = 0;
                             cmd.CommandText = @"insert into users (username, email, password_hash, full_name, role_enum)
                                  values (@username, @email, @password_hash, @full_name, @role_enum);
                                  select last_insert_id()";
+
                             cmd.Parameters.AddWithValue("@username",userModels.Username);
                             cmd.Parameters.AddWithValue("@email", userModels.Email);
                             cmd.Parameters.AddWithValue("@password_hash", userModels.Password);
                             cmd.Parameters.AddWithValue("@full_name", userModels.FullName);
                             cmd.Parameters.AddWithValue("@role_enum", userModels.RoleUser);
                             
-                            long userid = Convert.ToInt64(cmd.ExecuteScalar());
-                            string teachernumb = "";
+                            userid = Convert.ToInt64(cmd.ExecuteScalar());
+                            string teachernumb = "T001";
 
+                            cmd.Parameters.Clear();
                             cmd.CommandText = @"select teacher_number from teachers order by teacher_number desc limit 1";
                             object anu = cmd.ExecuteScalar();
                             if (anu != null && anu != DBNull.Value)
                             {
                                 string convert = anu.ToString();
-                                if (long.TryParse(convert, out long itulah))
+                                string num = convert.Replace("T", "");
+                                if (long.TryParse(num, out long itulah))
                                 {
                                     long bagogo = itulah + 1;
-                                    teachernumb = bagogo.ToString();
+                                    teachernumb = "T" + bagogo.ToString("D3");
                                 }
                             }
 
                             cmd.CommandText = @"insert into teachers (user_id, teacher_number) values (@user_id, @teacher_number)";
+                            cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@user_id", userid);
                             cmd.Parameters.AddWithValue("@teacher_number", teachernumb);
                             cmd.ExecuteNonQuery();

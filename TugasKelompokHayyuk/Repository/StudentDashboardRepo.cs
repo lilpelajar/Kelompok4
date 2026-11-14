@@ -1,5 +1,6 @@
 ﻿    using MySql.Data.MySqlClient;
-    using System;
+using MySqlX.XDevAPI.Common;
+using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Diagnostics.SymbolStore;
@@ -8,16 +9,16 @@
 using TugasKelompokHayyuk.Models;
 
 namespace TugasKelompokHayyuk.Repository
+{
+    public class StudentDashboardRepo : database
     {
-        public class StudentDashboardRepo : database
+        UserModels UserModels { get; set; }
+        public DataTable ReadTableClasses(string username)
         {
-          
-            public DataTable ReadTableClasses(string username)
+            DataTable dataTable = new DataTable();
+            using (var conn = MyConnection())
             {
-                DataTable dataTable = new DataTable();
-                using (var conn = MyConnection())
-                {
-                    string query = @"SELECT subjects.subject_name, grades.score, users.full_name AS Teacher_Name
+                string query = @"SELECT subjects.subject_name, grades.score, users.full_name AS Teacher_Name
                                     FROM grades
                                     JOIN teacher_subject ON grades.teacher_subject_id = teacher_subject.id
                                     JOIN subjects ON teacher_subject.subject_id = subjects.id
@@ -36,7 +37,33 @@ namespace TugasKelompokHayyuk.Repository
                     }
                 }
             }
-                return dataTable;
-            }
+            return dataTable;
         }
-    }
+
+        public int GetGradesAggregate(string username)
+        {
+            int Courses = 0;
+            using (var conn = MyConnection())
+            {
+                conn.Open();
+                string query = @"SELECT COUNT(subjects.id) 
+                                 FROM grades                        
+                                 JOIN teacher_subject ON teacher_subject.id = grades.teacher_subject_id                        
+                                 JOIN subjects ON subjects.id = teacher_subject.subject_id                        
+                                 JOIN students ON students.id = grades.student_id                        
+                                 JOIN users ON users.id = students.user_id                        
+                                 WHERE users.username = @username;";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object hasil = cmd.ExecuteScalar();
+                    if (hasil != null && hasil != DBNull.Value)
+                    {
+                        Courses = Convert.ToInt32(hasil);
+                    }
+                }
+            }
+            return Courses;
+        }
+    } 
+}

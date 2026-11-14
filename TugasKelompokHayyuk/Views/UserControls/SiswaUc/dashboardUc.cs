@@ -35,7 +35,15 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
 
         private void dashboardUc_Load(object sender, EventArgs e)
         {
-            dgvCoursesTable.DataSource = studentDashboardRepo.ReadTableClasses(LoginUser.Username);
+            lblUsername.Text = LoginUser.Username ?? "guest";
+
+            if (LoginUser != null && !string.IsNullOrEmpty(LoginUser.Username)) 
+            {
+                int total = studentDashboardRepo.GetGradesAggregate(LoginUser.Username);
+                dgvCoursesTable.DataSource = studentDashboardRepo.ReadTableClasses(LoginUser.Username);
+                lblCourses.Text = total.ToString();
+            }
+           
             dgvCoursesTable.Columns[0].HeaderText = "Subject Name";
             dgvCoursesTable.Columns[1].HeaderText = "Score";
             dgvCoursesTable.Columns[2].HeaderText = "Teacher Name";

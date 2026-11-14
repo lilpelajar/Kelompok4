@@ -44,7 +44,7 @@
             lblLevel = new Label();
             label8 = new Label();
             panel2 = new Panel();
-            label12 = new Label();
+            lblCourses = new Label();
             label9 = new Label();
             label1 = new Label();
             monthCalendar1 = new MonthCalendar();
@@ -216,7 +216,7 @@
             // label13
             // 
             label13.Dock = DockStyle.Fill;
-            label13.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
             label13.ForeColor = Color.White;
             label13.Location = new Point(0, 40);
             label13.Name = "label13";
@@ -228,7 +228,7 @@
             // label10
             // 
             label10.Dock = DockStyle.Top;
-            label10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
             label10.ForeColor = Color.White;
             label10.Location = new Point(0, 0);
             label10.Name = "label10";
@@ -252,7 +252,7 @@
             // lblLevel
             // 
             lblLevel.Dock = DockStyle.Fill;
-            lblLevel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLevel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
             lblLevel.ForeColor = Color.White;
             lblLevel.Location = new Point(0, 40);
             lblLevel.Name = "lblLevel";
@@ -264,7 +264,7 @@
             // label8
             // 
             label8.Dock = DockStyle.Top;
-            label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
             label8.ForeColor = Color.White;
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
@@ -276,7 +276,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(16, 27, 57);
-            panel2.Controls.Add(label12);
+            panel2.Controls.Add(lblCourses);
             panel2.Controls.Add(label9);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(206, 3);
@@ -284,22 +284,22 @@
             panel2.Size = new Size(197, 154);
             panel2.TabIndex = 1;
             // 
-            // label12
+            // lblCourses
             // 
-            label12.Dock = DockStyle.Fill;
-            label12.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(0, 40);
-            label12.Name = "label12";
-            label12.Size = new Size(197, 114);
-            label12.TabIndex = 3;
-            label12.Text = "label12";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
+            lblCourses.Dock = DockStyle.Fill;
+            lblCourses.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCourses.ForeColor = Color.White;
+            lblCourses.Location = new Point(0, 40);
+            lblCourses.Name = "lblCourses";
+            lblCourses.Size = new Size(197, 114);
+            lblCourses.TabIndex = 3;
+            lblCourses.Text = "label12";
+            lblCourses.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
             label9.Dock = DockStyle.Top;
-            label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
             label9.ForeColor = Color.White;
             label9.Location = new Point(0, 0);
             label9.Name = "label9";
@@ -772,7 +772,7 @@
         private Label lblUsername;
         private Label lblLevel;
         private Label label13;
-        private Label label12;
+        private Label lblCourses;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel13;
         private Button button4;
