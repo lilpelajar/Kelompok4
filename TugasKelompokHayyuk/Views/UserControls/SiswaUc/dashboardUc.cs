@@ -23,15 +23,7 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
             InitializeComponent();
         }
         
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void dashboardUc_Load(object sender, EventArgs e)
         {
@@ -40,8 +32,12 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
             if (LoginUser != null && !string.IsNullOrEmpty(LoginUser.Username)) 
             {
                 int total = studentDashboardRepo.GetGradesAggregate(LoginUser.Username);
+                decimal avggrade = studentDashboardRepo.GetAvgScore(LoginUser.Username);
+                string semester = studentDashboardRepo.GetSemester();
                 dgvCoursesTable.DataSource = studentDashboardRepo.ReadTableClasses(LoginUser.Username);
                 lblCourses.Text = total.ToString();
+                lblAvgScore.Text = avggrade.ToString("F2");
+                lblSemester.Text = semester + " Semester";
             }
            
             dgvCoursesTable.Columns[0].HeaderText = "Subject Name";

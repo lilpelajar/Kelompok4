@@ -1,5 +1,6 @@
 ﻿    using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
+using Org.BouncyCastle.Asn1.X509;
 using System;
     using System.Collections.Generic;
     using System.Data;
@@ -12,7 +13,7 @@ namespace TugasKelompokHayyuk.Repository
 {
     public class StudentDashboardRepo : database
     {
-        UserModels UserModels { get; set; }
+       
         public DataTable ReadTableClasses(string username)
         {
             DataTable dataTable = new DataTable();
@@ -64,6 +65,49 @@ namespace TugasKelompokHayyuk.Repository
                 }
             }
             return Courses;
+        }
+
+
+        public decimal GetAvgScore(string username) 
+        {
+            decimal avg = 0;
+            using (var conn = MyConnection())
+            {
+                conn.Open();
+                string query = @"SELECT AVG(grades.score) 
+                                 FROM grades                        
+                                 JOIN teacher_subject ON teacher_subject.id = grades.teacher_subject_id                        
+                                 JOIN subjects ON subjects.id = teacher_subject.subject_id                        
+                                 JOIN students ON students.id = grades.student_id                        
+                                 JOIN users ON users.id = students.user_id                        
+                                 WHERE users.username = @username";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object hasil = cmd.ExecuteScalar();
+                    if (hasil != null && hasil != DBNull.Value)
+                    {
+                        avg= Convert.ToDecimal(hasil);
+                    }
+                }
+            }
+            return avg;
+        }
+
+        public string GetSemester()
+        {
+            string semester;
+            using (var conn = MyConnection())
+            {
+                conn.Open();
+                string query = @"SELECT year_name FROM academic_years WHERE is_active = 1;";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    semester = Convert.ToString(cmd.ExecuteScalar());
+                    
+                }
+            }
+            return semester;
         }
     } 
 }

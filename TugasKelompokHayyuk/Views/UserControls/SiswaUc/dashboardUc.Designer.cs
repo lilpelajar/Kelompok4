@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel10 = new Panel();
             dgvCoursesTable = new DataGridView();
             label2 = new Label();
             panel8 = new Panel();
             lblUsername = new Label();
-            label5 = new Label();
+            lblSemester = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
-            label13 = new Label();
+            lblAvgScore = new Label();
             label10 = new Label();
             panel1 = new Panel();
             lblLevel = new Label();
@@ -116,23 +116,23 @@
             dgvCoursesTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCoursesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCoursesTable.BackgroundColor = Color.FromArgb(4, 45, 99);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(15, 46, 87);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(15, 46, 87);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvCoursesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(31, 92, 173);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(31, 92, 173);
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle6;
             dgvCoursesTable.Location = new Point(3, 54);
             dgvCoursesTable.Name = "dgvCoursesTable";
             dgvCoursesTable.ReadOnly = true;
@@ -157,7 +157,7 @@
             // 
             panel8.BackColor = Color.White;
             panel8.Controls.Add(lblUsername);
-            panel8.Controls.Add(label5);
+            panel8.Controls.Add(lblSemester);
             panel8.Controls.Add(tableLayoutPanel1);
             panel8.Controls.Add(label1);
             panel8.Location = new Point(16, 21);
@@ -175,15 +175,15 @@
             lblUsername.TabIndex = 3;
             lblUsername.Text = "Username";
             // 
-            // label5
+            // lblSemester
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(6, 34);
-            label5.Name = "label5";
-            label5.Size = new Size(145, 20);
-            label5.TabIndex = 2;
-            label5.Text = "2026/2027 Semester";
+            lblSemester.AutoSize = true;
+            lblSemester.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSemester.Location = new Point(6, 34);
+            lblSemester.Name = "lblSemester";
+            lblSemester.Size = new Size(106, 20);
+            lblSemester.TabIndex = 2;
+            lblSemester.Text = "label semester";
             // 
             // tableLayoutPanel1
             // 
@@ -205,7 +205,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(16, 27, 57);
-            panel3.Controls.Add(label13);
+            panel3.Controls.Add(lblAvgScore);
             panel3.Controls.Add(label10);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(409, 3);
@@ -213,17 +213,17 @@
             panel3.Size = new Size(198, 154);
             panel3.TabIndex = 2;
             // 
-            // label13
+            // lblAvgScore
             // 
-            label13.Dock = DockStyle.Fill;
-            label13.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
-            label13.ForeColor = Color.White;
-            label13.Location = new Point(0, 40);
-            label13.Name = "label13";
-            label13.Size = new Size(198, 114);
-            label13.TabIndex = 4;
-            label13.Text = "label13";
-            label13.TextAlign = ContentAlignment.MiddleCenter;
+            lblAvgScore.Dock = DockStyle.Fill;
+            lblAvgScore.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
+            lblAvgScore.ForeColor = Color.White;
+            lblAvgScore.Location = new Point(0, 40);
+            lblAvgScore.Name = "lblAvgScore";
+            lblAvgScore.Size = new Size(198, 114);
+            lblAvgScore.TabIndex = 4;
+            lblAvgScore.Text = "label13";
+            lblAvgScore.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -234,8 +234,8 @@
             label10.Name = "label10";
             label10.Size = new Size(198, 40);
             label10.TabIndex = 0;
-            label10.Text = "Grade";
-            label10.TextAlign = ContentAlignment.BottomCenter;
+            label10.Text = "Avg. Score";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -247,7 +247,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(197, 154);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+    
             // 
             // lblLevel
             // 
@@ -392,7 +392,7 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(336, 367);
             panel7.TabIndex = 12;
-            panel7.Paint += panel7_Paint;
+
             // 
             // flowLayoutPanel1
             // 
@@ -758,7 +758,7 @@
         private DataGridView dgvCoursesTable;
         private Label label2;
         private Panel panel4;
-        private Label label5;
+        private Label lblSemester;
         private Label label3;
         private Panel panel5;
         private Label label4;
@@ -771,7 +771,7 @@
         private Label label8;
         private Label lblUsername;
         private Label lblLevel;
-        private Label label13;
+        private Label lblAvgScore;
         private Label lblCourses;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel13;
