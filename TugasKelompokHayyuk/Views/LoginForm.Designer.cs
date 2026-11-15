@@ -56,11 +56,12 @@
             txtUsername.PlaceholderText = "Username";
             txtUsername.Size = new Size(345, 34);
             txtUsername.TabIndex = 1;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.Location = new Point(76, 175);
+            txtPassword.Location = new Point(76, 189);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
@@ -70,7 +71,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(76, 215);
+            checkBox1.Location = new Point(287, 225);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(134, 24);
             checkBox1.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(76, 296);
+            btnLogin.Location = new Point(76, 310);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(345, 49);
             btnLogin.TabIndex = 4;

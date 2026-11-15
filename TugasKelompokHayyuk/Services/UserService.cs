@@ -94,12 +94,20 @@ namespace TugasKelompokHayyuk.Services
             return IsSucces;
         }
 
+
         public bool UserLogin (string username, string password, Form form)
         {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(username))
             {
-                MessageBox.Show("username atau password blm diisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-               return false;
+                MessageBox.Show("Usermame is empty", "Warning" ,MessageBoxButtons.OK, MessageBoxIcon.Warning);
+              
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Password is Empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
             }
             UserModels userModels = new UserModels
             {
@@ -110,12 +118,15 @@ namespace TugasKelompokHayyuk.Services
             if (!usrname)
             {
                 MessageBox.Show("salah username nu kapang", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
                 return false;
             }
             bool pwuser = BCrypt.Net.BCrypt.Verify(password, userModels.Password);
             if (!pwuser)
             {
+               
                 MessageBox.Show("salah pw nu woi", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 return false;
             }
             Form formtrgt = null;

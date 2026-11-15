@@ -35,5 +35,12 @@ namespace TugasKelompokHayyuk
             else
                 txtPassword.PasswordChar = '*';
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+           
+
+        }
     }
 }
