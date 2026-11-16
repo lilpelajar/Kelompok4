@@ -35,6 +35,8 @@
             btnLogin = new Button();
             label2 = new Label();
             linkLabel1 = new LinkLabel();
+            lblUsn = new Label();
+            lblPw = new Label();
             SuspendLayout();
             // 
             // label1
@@ -109,11 +111,33 @@
             linkLabel1.Text = "Buat akun";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
+            // lblUsn
+            // 
+            lblUsn.AutoSize = true;
+            lblUsn.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsn.Location = new Point(76, 156);
+            lblUsn.Name = "lblUsn";
+            lblUsn.Size = new Size(43, 17);
+            lblUsn.TabIndex = 7;
+            lblUsn.Text = "label3";
+            // 
+            // lblPw
+            // 
+            lblPw.AutoSize = true;
+            lblPw.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPw.Location = new Point(76, 225);
+            lblPw.Name = "lblPw";
+            lblPw.Size = new Size(43, 17);
+            lblPw.TabIndex = 8;
+            lblPw.Text = "label4";
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 525);
+            Controls.Add(lblPw);
+            Controls.Add(lblUsn);
             Controls.Add(linkLabel1);
             Controls.Add(label2);
             Controls.Add(btnLogin);
@@ -136,5 +160,7 @@
         private Button btnLogin;
         private Label label2;
         private LinkLabel linkLabel1;
+        private Label lblUsn;
+        private Label lblPw;
     }
 }

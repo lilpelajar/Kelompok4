@@ -97,7 +97,7 @@ namespace TugasKelompokHayyuk.Repository
         public string GetSemester()
         {
             string semester;
-            using (var conn = MyConnection())
+            using (var conn = MyConnection())   
             {
                 conn.Open();
                 string query = @"SELECT year_name FROM academic_years WHERE is_active = 1;";

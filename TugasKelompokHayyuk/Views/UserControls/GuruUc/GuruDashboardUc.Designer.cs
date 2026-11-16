@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuruDashboardUc));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             label1 = new Label();
-            lblWelcomeTeacher = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
@@ -44,15 +43,6 @@
             dgvSchedules = new DataGridView();
             panel5 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            panel8 = new Panel();
-            label12 = new Label();
-            pictureBox4 = new PictureBox();
-            panel7 = new Panel();
-            label11 = new Label();
-            pictureBox3 = new PictureBox();
-            panel6 = new Panel();
-            label10 = new Label();
-            pictureBox2 = new PictureBox();
             label7 = new Label();
             panel9 = new Panel();
             dgvCoursesTable = new DataGridView();
@@ -68,17 +58,23 @@
             label5 = new Label();
             panel2 = new Panel();
             label4 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            pictureBox4 = new PictureBox();
+            panel8 = new Panel();
+            pictureBox3 = new PictureBox();
+            panel7 = new Panel();
+            pictureBox2 = new PictureBox();
+            label10 = new Label();
+            panel6 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSchedules).BeginInit();
             panel5.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).BeginInit();
             panel10.SuspendLayout();
@@ -88,6 +84,12 @@
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -98,24 +100,14 @@
             label1.Name = "label1";
             label1.Size = new Size(916, 48);
             label1.TabIndex = 0;
-            label1.Text = "Dashboard Teacher";
+            label1.Text = "Welcome, *Teacher name ";
             label1.TextAlign = ContentAlignment.BottomLeft;
-            // 
-            // lblWelcomeTeacher
-            // 
-            lblWelcomeTeacher.AutoSize = true;
-            lblWelcomeTeacher.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblWelcomeTeacher.Location = new Point(3, 50);
-            lblWelcomeTeacher.Name = "lblWelcomeTeacher";
-            lblWelcomeTeacher.Size = new Size(152, 23);
-            lblWelcomeTeacher.TabIndex = 1;
-            lblWelcomeTeacher.Text = "Welcome, Teacher!";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(30, 77);
+            label2.Location = new Point(30, 49);
             label2.Name = "label2";
             label2.Size = new Size(192, 23);
             label2.TabIndex = 2;
@@ -124,7 +116,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(9, 77);
+            pictureBox1.Location = new Point(9, 49);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(19, 23);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -136,7 +128,7 @@
             panel4.BackColor = Color.White;
             panel4.Controls.Add(label6);
             panel4.Controls.Add(dgvSchedules);
-            panel4.Location = new Point(9, 364);
+            panel4.Location = new Point(11, 364);
             panel4.Name = "panel4";
             panel4.Size = new Size(563, 226);
             panel4.TabIndex = 9;
@@ -157,32 +149,32 @@
             dgvSchedules.AllowUserToDeleteRows = false;
             dgvSchedules.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSchedules.BackgroundColor = Color.FromArgb(4, 45, 99);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(15, 46, 87);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvSchedules.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(15, 46, 87);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgvSchedules.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgvSchedules.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(31, 92, 173);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvSchedules.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(31, 92, 173);
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgvSchedules.DefaultCellStyle = dataGridViewCellStyle8;
             dgvSchedules.Dock = DockStyle.Bottom;
-            dgvSchedules.Location = new Point(0, 57);
+            dgvSchedules.Location = new Point(0, 40);
             dgvSchedules.Name = "dgvSchedules";
             dgvSchedules.ReadOnly = true;
             dgvSchedules.RowHeadersVisible = false;
             dgvSchedules.RowHeadersWidth = 51;
             dgvSchedules.ScrollBars = ScrollBars.None;
             dgvSchedules.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSchedules.Size = new Size(563, 169);
+            dgvSchedules.Size = new Size(563, 186);
             dgvSchedules.TabIndex = 4;
             // 
             // panel5
@@ -211,96 +203,6 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.Size = new Size(311, 198);
             tableLayoutPanel2.TabIndex = 7;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.FromArgb(168, 199, 240);
-            panel8.Controls.Add(label12);
-            panel8.Controls.Add(pictureBox4);
-            panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(3, 133);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(305, 62);
-            panel8.TabIndex = 2;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(58, 16);
-            label12.Name = "label12";
-            label12.Size = new Size(109, 28);
-            label12.TabIndex = 5;
-            label12.Text = "Add Grade";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.White;
-            pictureBox4.Location = new Point(8, 12);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 40);
-            pictureBox4.TabIndex = 4;
-            pictureBox4.TabStop = false;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(168, 199, 240);
-            panel7.Controls.Add(label11);
-            panel7.Controls.Add(pictureBox3);
-            panel7.Dock = DockStyle.Fill;
-            panel7.Location = new Point(3, 68);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(305, 59);
-            panel7.TabIndex = 1;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(56, 15);
-            label11.Name = "label11";
-            label11.Size = new Size(146, 28);
-            label11.TabIndex = 3;
-            label11.Text = "Upload Lesson";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.White;
-            pictureBox3.Location = new Point(8, 9);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 40);
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(168, 199, 240);
-            panel6.Controls.Add(label10);
-            panel6.Controls.Add(pictureBox2);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(305, 59);
-            panel6.TabIndex = 0;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(56, 14);
-            label10.Name = "label10";
-            label10.Size = new Size(115, 28);
-            label10.TabIndex = 1;
-            label10.Text = "Create Task";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.Location = new Point(8, 8);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 40);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
             // 
             // label7
             // 
@@ -331,23 +233,23 @@
             dgvCoursesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCoursesTable.BackgroundColor = Color.FromArgb(168, 199, 240);
             dgvCoursesTable.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(15, 46, 87);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(15, 46, 87);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgvCoursesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(31, 92, 173);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(31, 92, 173);
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle10;
             dgvCoursesTable.Dock = DockStyle.Bottom;
             dgvCoursesTable.Location = new Point(0, 53);
             dgvCoursesTable.Name = "dgvCoursesTable";
@@ -376,9 +278,9 @@
             panel10.BackColor = Color.White;
             panel10.Controls.Add(dataGridView1);
             panel10.Controls.Add(label9);
-            panel10.Location = new Point(375, 610);
+            panel10.Location = new Point(366, 610);
             panel10.Name = "panel10";
-            panel10.Size = new Size(526, 615);
+            panel10.Size = new Size(535, 615);
             panel10.TabIndex = 13;
             // 
             // dataGridView1
@@ -387,23 +289,23 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.FromArgb(4, 45, 99);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(15, 46, 87);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(15, 46, 87);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(31, 92, 173);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(31, 92, 173);
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 53);
             dataGridView1.Name = "dataGridView1";
@@ -412,7 +314,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.ScrollBars = ScrollBars.None;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(526, 562);
+            dataGridView1.Size = new Size(535, 562);
             dataGridView1.TabIndex = 12;
             // 
             // label9
@@ -422,7 +324,7 @@
             label9.ForeColor = Color.FromArgb(31, 92, 173);
             label9.Location = new Point(0, 0);
             label9.Name = "label9";
-            label9.Size = new Size(526, 37);
+            label9.Size = new Size(535, 37);
             label9.TabIndex = 8;
             label9.Text = "Students";
             label9.TextAlign = ContentAlignment.BottomCenter;
@@ -455,6 +357,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(15, 46, 87);
+            panel1.Controls.Add(label13);
             panel1.Controls.Add(label3);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
@@ -464,7 +367,7 @@
             // label3
             // 
             label3.Dock = DockStyle.Top;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
@@ -476,6 +379,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(15, 46, 87);
+            panel3.Controls.Add(label15);
             panel3.Controls.Add(label5);
             panel3.Location = new Point(573, 3);
             panel3.Name = "panel3";
@@ -485,7 +389,7 @@
             // label5
             // 
             label5.Dock = DockStyle.Top;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
@@ -497,6 +401,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(15, 46, 87);
+            panel2.Controls.Add(label14);
             panel2.Controls.Add(label4);
             panel2.Location = new Point(288, 3);
             panel2.Name = "panel2";
@@ -506,7 +411,7 @@
             // label4
             // 
             label4.Dock = DockStyle.Top;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
@@ -514,6 +419,132 @@
             label4.TabIndex = 5;
             label4.Text = "Not Graded";
             label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            label13.Dock = DockStyle.Fill;
+            label13.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(0, 34);
+            label13.Name = "label13";
+            label13.Size = new Size(279, 137);
+            label13.TabIndex = 6;
+            label13.Text = "label13";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            label14.Dock = DockStyle.Fill;
+            label14.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(0, 34);
+            label14.Name = "label14";
+            label14.Size = new Size(279, 137);
+            label14.TabIndex = 7;
+            label14.Text = "label14";
+            label14.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            label15.Dock = DockStyle.Fill;
+            label15.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(0, 34);
+            label15.Name = "label15";
+            label15.Size = new Size(280, 137);
+            label15.TabIndex = 8;
+            label15.Text = "label15";
+            label15.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(58, 16);
+            label12.Name = "label12";
+            label12.Size = new Size(109, 28);
+            label12.TabIndex = 5;
+            label12.Text = "Add Grade";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(56, 15);
+            label11.Name = "label11";
+            label11.Size = new Size(146, 28);
+            label11.TabIndex = 3;
+            label11.Text = "Upload Lesson";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.White;
+            pictureBox4.Location = new Point(8, 12);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(40, 40);
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(168, 199, 240);
+            panel8.Controls.Add(label12);
+            panel8.Controls.Add(pictureBox4);
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(3, 133);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(305, 62);
+            panel8.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.White;
+            pictureBox3.Location = new Point(8, 9);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(40, 40);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(168, 199, 240);
+            panel7.Controls.Add(label11);
+            panel7.Controls.Add(pictureBox3);
+            panel7.Dock = DockStyle.Fill;
+            panel7.Location = new Point(3, 68);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(305, 59);
+            panel7.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Location = new Point(8, 8);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(40, 40);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(56, 14);
+            label10.Name = "label10";
+            label10.Size = new Size(115, 28);
+            label10.TabIndex = 1;
+            label10.Text = "Create Task";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(168, 199, 240);
+            panel6.Controls.Add(label10);
+            panel6.Controls.Add(pictureBox2);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(3, 3);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(305, 59);
+            panel6.TabIndex = 0;
             // 
             // GuruDashboardUc
             // 
@@ -526,7 +557,6 @@
             Controls.Add(panel4);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
-            Controls.Add(lblWelcomeTeacher);
             Controls.Add(label1);
             Name = "GuruDashboardUc";
             Size = new Size(916, 1236);
@@ -537,15 +567,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvSchedules).EndInit();
             panel5.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).EndInit();
             panel10.ResumeLayout(false);
@@ -555,6 +576,15 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -562,7 +592,6 @@
         #endregion
 
         private Label label1;
-        private Label lblWelcomeTeacher;
         private Label label2;
         private PictureBox pictureBox1;
         private Panel panel4;
@@ -571,9 +600,6 @@
         private Panel panel5;
         private Label label7;
         private TableLayoutPanel tableLayoutPanel2;
-        private Panel panel8;
-        private Panel panel7;
-        private Panel panel6;
         private Panel panel9;
         private Label label8;
         private DataGridView dgvCoursesTable;
@@ -588,11 +614,17 @@
         private Label label5;
         private Panel panel2;
         private Label label4;
-        private Label label11;
-        private PictureBox pictureBox3;
-        private Label label10;
-        private PictureBox pictureBox2;
+        private Label label13;
+        private Label label15;
+        private Label label14;
+        private Panel panel8;
         private Label label12;
         private PictureBox pictureBox4;
+        private Panel panel7;
+        private Label label11;
+        private PictureBox pictureBox3;
+        private Panel panel6;
+        private Label label10;
+        private PictureBox pictureBox2;
     }
 }
