@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label26 = new Label();
-            button4 = new Button();
-            label22 = new Label();
+            lblIsGraded = new Label();
+            btnView = new Button();
+            lblDueDate = new Label();
             label23 = new Label();
-            label24 = new Label();
+            lblSubjectName = new Label();
             SuspendLayout();
             // 
-            // label26
+            // lblIsGraded
             // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.White;
-            label26.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label26.ForeColor = Color.DimGray;
-            label26.Location = new Point(7, 35);
-            label26.Name = "label26";
-            label26.Size = new Size(77, 17);
-            label26.TabIndex = 19;
-            label26.Text = "Not graded";
+            lblIsGraded.AutoSize = true;
+            lblIsGraded.BackColor = Color.White;
+            lblIsGraded.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIsGraded.ForeColor = Color.DimGray;
+            lblIsGraded.Location = new Point(7, 35);
+            lblIsGraded.Name = "lblIsGraded";
+            lblIsGraded.Size = new Size(77, 17);
+            lblIsGraded.TabIndex = 19;
+            lblIsGraded.Text = "Not graded";
             // 
-            // button4
+            // btnView
             // 
-            button4.BackColor = Color.FromArgb(15, 46, 87);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(255, 60);
-            button4.Name = "button4";
-            button4.Size = new Size(72, 33);
-            button4.TabIndex = 18;
-            button4.Text = "View";
-            button4.UseVisualStyleBackColor = false;
+            btnView.BackColor = Color.FromArgb(15, 46, 87);
+            btnView.FlatStyle = FlatStyle.Flat;
+            btnView.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnView.ForeColor = Color.White;
+            btnView.Location = new Point(255, 60);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(72, 33);
+            btnView.TabIndex = 18;
+            btnView.Text = "View";
+            btnView.UseVisualStyleBackColor = false;
             // 
-            // label22
+            // lblDueDate
             // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.White;
-            label22.Font = new Font("Segoe UI", 9F);
-            label22.ForeColor = Color.FromArgb(192, 0, 0);
-            label22.Location = new Point(83, 74);
-            label22.Name = "label22";
-            label22.Size = new Size(85, 20);
-            label22.TabIndex = 17;
-            label22.Text = "2026/10/09";
+            lblDueDate.AutoSize = true;
+            lblDueDate.BackColor = Color.White;
+            lblDueDate.Font = new Font("Segoe UI", 9F);
+            lblDueDate.ForeColor = Color.FromArgb(192, 0, 0);
+            lblDueDate.Location = new Point(83, 74);
+            lblDueDate.Name = "lblDueDate";
+            lblDueDate.Size = new Size(85, 20);
+            lblDueDate.TabIndex = 17;
+            lblDueDate.Text = "2026/10/09";
             // 
             // label23
             // 
@@ -84,26 +84,26 @@
             label23.TabIndex = 16;
             label23.Text = "Due date:";
             // 
-            // label24
+            // lblSubjectName
             // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label24.Location = new Point(3, 6);
-            label24.Name = "label24";
-            label24.Size = new Size(219, 31);
-            label24.TabIndex = 15;
-            label24.Text = "Math1 - Assignment";
+            lblSubjectName.AutoSize = true;
+            lblSubjectName.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSubjectName.Location = new Point(3, 6);
+            lblSubjectName.Name = "lblSubjectName";
+            lblSubjectName.Size = new Size(219, 31);
+            lblSubjectName.TabIndex = 15;
+            lblSubjectName.Text = "Math1 - Assignment";
             // 
             // CardAssignmentUc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(label26);
-            Controls.Add(button4);
-            Controls.Add(label22);
+            Controls.Add(lblIsGraded);
+            Controls.Add(btnView);
+            Controls.Add(lblDueDate);
             Controls.Add(label23);
-            Controls.Add(label24);
+            Controls.Add(lblSubjectName);
             Name = "CardAssignmentUc";
             Size = new Size(330, 101);
             ResumeLayout(false);
@@ -112,10 +112,10 @@
 
         #endregion
 
-        private Label label26;
-        private Button button4;
-        private Label label22;
+        private Label lblIsGraded;
+        private Button btnView;
+        private Label lblDueDate;
         private Label label23;
-        private Label label24;
+        private Label lblSubjectName;
     }
 }

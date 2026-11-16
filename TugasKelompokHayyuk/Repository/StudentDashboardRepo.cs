@@ -41,6 +41,34 @@ namespace TugasKelompokHayyuk.Repository
             return dataTable;
         }
 
+        public DataTable ReadGradeIsNull(string username)
+        {
+            DataTable dataTable = new DataTable();
+            using (var conn = MyConnection())
+            {
+                string query = @"SELECT subjects.subject_name, grades.score, users.full_name AS Teacher_Name
+                                    FROM grades
+                                    JOIN teacher_subject ON grades.teacher_subject_id = teacher_subject.id
+                                    JOIN subjects ON teacher_subject.subject_id = subjects.id
+                                    JOIN teachers ON teacher_subject.teacher_id = teachers.id
+                                    JOIN users ON teachers.user_id = users.id
+                                    JOIN students ON grades.student_id = students.id
+                                    JOIN users AS student_user ON students.user_id = student_user.id
+                                    WHERE student_user.username = @username and grades.score = 0";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            return dataTable;
+        }
+
+
         public int GetGradesAggregate(string username)
         {
             int Courses = 0;

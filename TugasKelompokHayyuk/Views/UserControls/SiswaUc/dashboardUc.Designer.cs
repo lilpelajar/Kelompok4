@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel10 = new Panel();
             dgvCoursesTable = new DataGridView();
             label2 = new Label();
@@ -52,28 +52,8 @@
             label3 = new Label();
             panel5 = new Panel();
             label4 = new Label();
-            panel6 = new Panel();
-            label6 = new Label();
             panel7 = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            panel13 = new Panel();
-            label26 = new Label();
-            button4 = new Button();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            panel9 = new Panel();
-            label11 = new Label();
-            button1 = new Button();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            panel11 = new Panel();
-            label17 = new Label();
-            button2 = new Button();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
+            flpAssigmentCard = new FlowLayoutPanel();
             panel12 = new Panel();
             label21 = new Label();
             button3 = new Button();
@@ -81,6 +61,17 @@
             label27 = new Label();
             label28 = new Label();
             label7 = new Label();
+            label6 = new Label();
+            panel6 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel9 = new Panel();
+            label5 = new Label();
+            panel11 = new Panel();
+            label11 = new Label();
+            panel13 = new Panel();
+            label12 = new Label();
+            panel14 = new Panel();
+            label13 = new Label();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCoursesTable).BeginInit();
             panel8.SuspendLayout();
@@ -90,13 +81,15 @@
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
-            panel6.SuspendLayout();
             panel7.SuspendLayout();
+            flpAssigmentCard.SuspendLayout();
+            panel12.SuspendLayout();
+            panel6.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            panel13.SuspendLayout();
             panel9.SuspendLayout();
             panel11.SuspendLayout();
-            panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
             SuspendLayout();
             // 
             // panel10
@@ -116,23 +109,23 @@
             dgvCoursesTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCoursesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCoursesTable.BackgroundColor = Color.FromArgb(4, 45, 99);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(15, 46, 87);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(15, 46, 87);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvCoursesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvCoursesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(2, 46, 99);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(31, 92, 173);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(2, 46, 99);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(31, 92, 173);
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvCoursesTable.DefaultCellStyle = dataGridViewCellStyle4;
             dgvCoursesTable.Location = new Point(3, 54);
             dgvCoursesTable.Name = "dgvCoursesTable";
             dgvCoursesTable.ReadOnly = true;
@@ -257,7 +250,7 @@
             lblLevel.Name = "lblLevel";
             lblLevel.Size = new Size(197, 114);
             lblLevel.TabIndex = 2;
-            lblLevel.Text = "label12";
+            lblLevel.Text = "X";
             lblLevel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -363,261 +356,26 @@
             label4.TabIndex = 3;
             label4.Text = "Announcement";
             // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(label6);
-            panel6.Location = new Point(16, 526);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(265, 367);
-            panel6.TabIndex = 11;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
-            label6.Location = new Point(3, 2);
-            label6.Name = "label6";
-            label6.Size = new Size(78, 25);
-            label6.TabIndex = 4;
-            label6.Text = "Courses";
-            // 
             // panel7
             // 
             panel7.BackColor = Color.White;
-            panel7.Controls.Add(flowLayoutPanel1);
+            panel7.Controls.Add(flpAssigmentCard);
             panel7.Controls.Add(label7);
             panel7.Location = new Point(293, 526);
             panel7.Name = "panel7";
             panel7.Size = new Size(336, 367);
             panel7.TabIndex = 12;
             // 
-            // flowLayoutPanel1
+            // flpAssigmentCard
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(panel13);
-            flowLayoutPanel1.Controls.Add(panel9);
-            flowLayoutPanel1.Controls.Add(panel11);
-            flowLayoutPanel1.Controls.Add(panel12);
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 47);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(358, 325);
-            flowLayoutPanel1.TabIndex = 6;
-            flowLayoutPanel1.WrapContents = false;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(label26);
-            panel13.Controls.Add(button4);
-            panel13.Controls.Add(label22);
-            panel13.Controls.Add(label23);
-            panel13.Controls.Add(label24);
-            panel13.Location = new Point(3, 3);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(330, 101);
-            panel13.TabIndex = 17;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.White;
-            label26.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label26.ForeColor = Color.DimGray;
-            label26.Location = new Point(6, 39);
-            label26.Name = "label26";
-            label26.Size = new Size(77, 17);
-            label26.TabIndex = 14;
-            label26.Text = "Not graded";
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(15, 46, 87);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(254, 64);
-            button4.Name = "button4";
-            button4.Size = new Size(72, 33);
-            button4.TabIndex = 13;
-            button4.Text = "View";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.White;
-            label22.Font = new Font("Segoe UI", 9F);
-            label22.ForeColor = Color.FromArgb(192, 0, 0);
-            label22.Location = new Point(82, 78);
-            label22.Name = "label22";
-            label22.Size = new Size(85, 20);
-            label22.TabIndex = 12;
-            label22.Text = "2026/10/09";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.BackColor = Color.White;
-            label23.Font = new Font("Segoe UI", 9F);
-            label23.ForeColor = Color.FromArgb(192, 0, 0);
-            label23.Location = new Point(3, 78);
-            label23.Name = "label23";
-            label23.Size = new Size(73, 20);
-            label23.TabIndex = 11;
-            label23.Text = "Due date:";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label24.Location = new Point(2, 10);
-            label24.Name = "label24";
-            label24.Size = new Size(219, 31);
-            label24.TabIndex = 10;
-            label24.Text = "Math1 - Assignment";
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(label11);
-            panel9.Controls.Add(button1);
-            panel9.Controls.Add(label14);
-            panel9.Controls.Add(label15);
-            panel9.Controls.Add(label16);
-            panel9.Location = new Point(3, 110);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(330, 101);
-            panel9.TabIndex = 18;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.DimGray;
-            label11.Location = new Point(6, 39);
-            label11.Name = "label11";
-            label11.Size = new Size(77, 17);
-            label11.TabIndex = 14;
-            label11.Text = "Not graded";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(15, 46, 87);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(254, 64);
-            button1.Name = "button1";
-            button1.Size = new Size(72, 33);
-            button1.TabIndex = 13;
-            button1.Text = "View";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.White;
-            label14.Font = new Font("Segoe UI", 9F);
-            label14.ForeColor = Color.FromArgb(192, 0, 0);
-            label14.Location = new Point(82, 78);
-            label14.Name = "label14";
-            label14.Size = new Size(85, 20);
-            label14.TabIndex = 12;
-            label14.Text = "2026/10/09";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.BackColor = Color.White;
-            label15.Font = new Font("Segoe UI", 9F);
-            label15.ForeColor = Color.FromArgb(192, 0, 0);
-            label15.Location = new Point(3, 78);
-            label15.Name = "label15";
-            label15.Size = new Size(73, 20);
-            label15.TabIndex = 11;
-            label15.Text = "Due date:";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(2, 10);
-            label16.Name = "label16";
-            label16.Size = new Size(223, 31);
-            label16.TabIndex = 10;
-            label16.Text = "Math2 - Assignment";
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(label17);
-            panel11.Controls.Add(button2);
-            panel11.Controls.Add(label18);
-            panel11.Controls.Add(label19);
-            panel11.Controls.Add(label20);
-            panel11.Location = new Point(3, 217);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(330, 101);
-            panel11.TabIndex = 19;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.BackColor = Color.White;
-            label17.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.DimGray;
-            label17.Location = new Point(6, 39);
-            label17.Name = "label17";
-            label17.Size = new Size(77, 17);
-            label17.TabIndex = 14;
-            label17.Text = "Not graded";
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(15, 46, 87);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(254, 64);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 33);
-            button2.TabIndex = 13;
-            button2.Text = "View";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.BackColor = Color.White;
-            label18.Font = new Font("Segoe UI", 9F);
-            label18.ForeColor = Color.FromArgb(192, 0, 0);
-            label18.Location = new Point(82, 78);
-            label18.Name = "label18";
-            label18.Size = new Size(85, 20);
-            label18.TabIndex = 12;
-            label18.Text = "2026/10/09";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.BackColor = Color.White;
-            label19.Font = new Font("Segoe UI", 9F);
-            label19.ForeColor = Color.FromArgb(192, 0, 0);
-            label19.Location = new Point(3, 78);
-            label19.Name = "label19";
-            label19.Size = new Size(73, 20);
-            label19.TabIndex = 11;
-            label19.Text = "Due date:";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.Location = new Point(2, 10);
-            label20.Name = "label20";
-            label20.Size = new Size(223, 31);
-            label20.TabIndex = 10;
-            label20.Text = "Math3 - Assignment";
+            flpAssigmentCard.AutoScroll = true;
+            flpAssigmentCard.Controls.Add(panel12);
+            flpAssigmentCard.FlowDirection = FlowDirection.TopDown;
+            flpAssigmentCard.Location = new Point(0, 47);
+            flpAssigmentCard.Name = "flpAssigmentCard";
+            flpAssigmentCard.Size = new Size(358, 325);
+            flpAssigmentCard.TabIndex = 6;
+            flpAssigmentCard.WrapContents = false;
             // 
             // panel12
             // 
@@ -626,7 +384,7 @@
             panel12.Controls.Add(label25);
             panel12.Controls.Add(label27);
             panel12.Controls.Add(label28);
-            panel12.Location = new Point(3, 324);
+            panel12.Location = new Point(3, 3);
             panel12.Name = "panel12";
             panel12.Size = new Size(330, 101);
             panel12.TabIndex = 20;
@@ -696,9 +454,115 @@
             label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             label7.Location = new Point(3, 2);
             label7.Name = "label7";
-            label7.Size = new Size(112, 25);
+            label7.Size = new Size(75, 25);
             label7.TabIndex = 5;
-            label7.Text = "Assignment";
+            label7.Text = "Futures";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            label6.Location = new Point(3, 2);
+            label6.Name = "label6";
+            label6.Size = new Size(57, 25);
+            label6.TabIndex = 4;
+            label6.Text = "Tasks";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(flowLayoutPanel1);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(16, 526);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(265, 367);
+            panel6.TabIndex = 11;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(panel9);
+            flowLayoutPanel1.Controls.Add(panel11);
+            flowLayoutPanel1.Controls.Add(panel13);
+            flowLayoutPanel1.Controls.Add(panel14);
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(1, 50);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(287, 317);
+            flowLayoutPanel1.TabIndex = 13;
+            flowLayoutPanel1.WrapContents = false;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(label5);
+            panel9.Location = new Point(3, 3);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(258, 81);
+            panel9.TabIndex = 0;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(15, 7);
+            label5.Name = "label5";
+            label5.Size = new Size(223, 31);
+            label5.TabIndex = 15;
+            label5.Text = "Math4 - Assignment";
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(label11);
+            panel11.Location = new Point(3, 90);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(258, 81);
+            panel11.TabIndex = 16;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(15, 7);
+            label11.Name = "label11";
+            label11.Size = new Size(223, 31);
+            label11.TabIndex = 15;
+            label11.Text = "Math4 - Assignment";
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(label12);
+            panel13.Location = new Point(3, 177);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(258, 81);
+            panel13.TabIndex = 16;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(15, 7);
+            label12.Name = "label12";
+            label12.Size = new Size(223, 31);
+            label12.TabIndex = 15;
+            label12.Text = "Math4 - Assignment";
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(label13);
+            panel14.Location = new Point(3, 264);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(258, 81);
+            panel14.TabIndex = 16;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(15, 7);
+            label13.Name = "label13";
+            label13.Size = new Size(223, 31);
+            label13.TabIndex = 15;
+            label13.Text = "Math4 - Assignment";
             // 
             // dashboardUc
             // 
@@ -712,7 +576,7 @@
             Controls.Add(panel8);
             Controls.Add(monthCalendar1);
             Name = "dashboardUc";
-            Size = new Size(915, 902);
+            Size = new Size(915, 1329);
             Load += dashboardUc_Load;
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
@@ -727,19 +591,22 @@
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            flpAssigmentCard.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
-            panel12.ResumeLayout(false);
-            panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -760,9 +627,7 @@
         private Label label3;
         private Panel panel5;
         private Label label4;
-        private Panel panel6;
         private Panel panel7;
-        private Label label6;
         private Label label7;
         private Label label9;
         private Label label10;
@@ -771,30 +636,23 @@
         private Label lblLevel;
         private Label lblAvgScore;
         private Label lblCourses;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Panel panel13;
-        private Button button4;
-        private Label label22;
-        private Label label23;
-        private Label label26;
-        private Label label24;
-        private Panel panel9;
-        private Label label11;
-        private Button button1;
-        private Label label14;
-        private Label label15;
-        private Label label16;
-        private Panel panel11;
-        private Label label17;
-        private Button button2;
-        private Label label18;
-        private Label label19;
-        private Label label20;
+        private FlowLayoutPanel flpAssigmentCard;
         private Panel panel12;
         private Label label21;
         private Button button3;
         private Label label25;
         private Label label27;
         private Label label28;
+        private Label label6;
+        private Panel panel6;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel9;
+        private Label label5;
+        private Panel panel11;
+        private Label label11;
+        private Panel panel13;
+        private Label label12;
+        private Panel panel14;
+        private Label label13;
     }
 }

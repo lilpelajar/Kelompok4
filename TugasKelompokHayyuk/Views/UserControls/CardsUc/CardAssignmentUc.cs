@@ -14,5 +14,26 @@ namespace TugasKelompokHayyuk.Views.UserControls.CardsUc
         {
             InitializeComponent();
         }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string SubjectName
+        {
+            get { return lblSubjectName.Text; }
+            set { lblSubjectName.Text = value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string Grade
+        {
+            get { return lblIsGraded.Text; }
+            set { lblIsGraded.Text = value; }
+        }
+
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string DueDate
+        {
+           get { return lblDueDate.Text; }
+           set { lblDueDate.Text = value; }
+        }
     }
 }

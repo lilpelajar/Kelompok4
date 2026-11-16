@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using TugasKelompokHayyuk.Models;
 using TugasKelompokHayyuk.Repository;
+using TugasKelompokHayyuk.Views.UserControls.CardsUc;
 
 namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
 {
@@ -28,9 +29,19 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
         private void dashboardUc_Load(object sender, EventArgs e)
         {
             lblUsername.Text = LoginUser.Username ?? "guest";
-
+            flpAssigmentCard.Controls.Clear();
             if (LoginUser != null && !string.IsNullOrEmpty(LoginUser.Username)) 
             {
+                DataTable dt = studentDashboardRepo.ReadGradeIsNull(LoginUser.Username);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    CardAssignmentUc cardAssignmentUc = new CardAssignmentUc();
+                    cardAssignmentUc.SubjectName = row["subject_name"].ToString();
+                    flpAssigmentCard.Controls.Add(cardAssignmentUc);
+                }
+
+
                 int total = studentDashboardRepo.GetGradesAggregate(LoginUser.Username);
                 decimal avggrade = studentDashboardRepo.GetAvgScore(LoginUser.Username);
                 string semester = studentDashboardRepo.GetSemester();
