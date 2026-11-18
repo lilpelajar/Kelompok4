@@ -18,7 +18,7 @@ namespace TugasKelompokHayyuk.Services
 
         //forms
         AdminForm AdminForm = new AdminForm();
-        GuruForm GuruForm = new GuruForm();
+       
     
         
 
@@ -76,7 +76,7 @@ namespace TugasKelompokHayyuk.Services
                         LoadFormRoleBased(form, AdminForm);
                         break;
                     case "Guru":
-                        LoadFormRoleBased(form, GuruForm);
+                        formtrgt = new GuruForm(userModels);
                         break;
                     case "Siswa":
                         formtrgt = new SiswaForm(userModels);
@@ -117,7 +117,7 @@ namespace TugasKelompokHayyuk.Services
             bool usrname = LoginRepo.UserLogin(userModels);
             if (!usrname)
             {
-                MessageBox.Show("salah username nu kapang", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Username is incorrect", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
                 return false;
             }
@@ -125,7 +125,7 @@ namespace TugasKelompokHayyuk.Services
             if (!pwuser)
             {
                
-                MessageBox.Show("salah pw nu woi", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Password is incorrect", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return false;
             }
@@ -137,7 +137,7 @@ namespace TugasKelompokHayyuk.Services
                     LoadFormRoleBased(form, AdminForm);
                     break;
                 case "Guru":
-                    LoadFormRoleBased(form, GuruForm);
+                    formtrgt = new GuruForm(userModels);
                     break;
                 case "Siswa":
                     formtrgt = new SiswaForm(userModels);

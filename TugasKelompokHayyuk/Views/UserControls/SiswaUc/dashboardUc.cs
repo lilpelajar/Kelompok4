@@ -24,13 +24,11 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
             InitializeComponent();
         }
         
-        
-
         private void dashboardUc_Load(object sender, EventArgs e)
         {
             lblUsername.Text = LoginUser.Username ?? "guest";
             flpAssigmentCard.Controls.Clear();
-            if (LoginUser != null && !string.IsNullOrEmpty(LoginUser.Username)) 
+            if (LoginUser != null && !string.IsNullOrEmpty(LoginUser.Username))
             {
                 DataTable dt = studentDashboardRepo.ReadGradeIsNull(LoginUser.Username);
 
@@ -50,7 +48,7 @@ namespace TugasKelompokHayyuk.Views.UserControls.SiswaUc
                 lblAvgScore.Text = avggrade.ToString("F2");
                 lblSemester.Text = semester + " Semester";
             }
-           
+
             dgvCoursesTable.Columns[0].HeaderText = "Subject Name";
             dgvCoursesTable.Columns[1].HeaderText = "Score";
             dgvCoursesTable.Columns[2].HeaderText = "Teacher Name";

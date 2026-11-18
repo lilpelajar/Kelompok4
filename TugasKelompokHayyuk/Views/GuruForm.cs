@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TugasKelompokHayyuk.Models;
 using TugasKelompokHayyuk.Repository.Voids;
 using TugasKelompokHayyuk.Views.UserControls.GuruUc;
 
@@ -12,20 +13,19 @@ namespace TugasKelompokHayyuk.Views
 {
     public partial class GuruForm : Form
     {
-        GuruDashboardUc dashboardGuru = new GuruDashboardUc();
         VoidsAll VoidsAll = new VoidsAll();
-        public GuruForm()
+        private UserModels user;
+        public GuruForm(UserModels userModels)
         {
             InitializeComponent();
+            user = userModels;
         }
         
         private void GuruForm_Load(object sender, EventArgs e)
         {
-            GuruDashboardUc guruDashboardUc = new GuruDashboardUc();
-            pnlMain.Controls.Add(guruDashboardUc);
             btnDashboard_Click(sender, e);
         }
-
+         
 
         private void GuruForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -34,7 +34,9 @@ namespace TugasKelompokHayyuk.Views
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            VoidsAll.getUserControl(pnlMain, dashboardGuru);
+            GuruDashboardUc dashboardUc = new GuruDashboardUc();
+            dashboardUc.LoginUser = user;
+            VoidsAll.getUserControl(pnlMain, dashboardUc);
             VoidsAll.buttonOnOff(btnDashboard, btnAttendance, btnCalendar, btnSchedules);
 
         }

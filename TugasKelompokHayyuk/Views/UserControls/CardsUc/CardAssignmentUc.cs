@@ -5,10 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TugasKelompokHayyuk.Models;
 
 namespace TugasKelompokHayyuk.Views.UserControls.CardsUc
 {
-    public partial class CardAssignmentUc : UserControl
+    public partial class CardAssignmentUc : UserControl 
     {
         public CardAssignmentUc()
         {
