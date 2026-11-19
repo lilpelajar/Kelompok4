@@ -28,75 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button1 = new Button();
-            label4 = new Label();
+            lblStudnentName = new Label();
+            lblClassName = new Label();
+            lblDescription = new Label();
+            btnRate = new Button();
+            lblSubmited = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblStudnentName
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(140, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Student name";
+            lblStudnentName.AutoSize = true;
+            lblStudnentName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStudnentName.Location = new Point(0, 0);
+            lblStudnentName.Name = "lblStudnentName";
+            lblStudnentName.Size = new Size(140, 28);
+            lblStudnentName.TabIndex = 0;
+            lblStudnentName.Text = "Student name";
             // 
-            // label2
+            // lblClassName
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(224, 3);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 23);
-            label2.TabIndex = 1;
-            label2.Text = " Liverpool";
+            lblClassName.AutoSize = true;
+            lblClassName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblClassName.Location = new Point(224, 3);
+            lblClassName.Name = "lblClassName";
+            lblClassName.Size = new Size(84, 23);
+            lblClassName.TabIndex = 1;
+            lblClassName.Text = " Liverpool";
             // 
-            // label3
+            // lblDescription
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(3, 28);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 17);
-            label3.TabIndex = 2;
-            label3.Text = "Base Quantities";
+            lblDescription.AutoSize = true;
+            lblDescription.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescription.ForeColor = Color.DimGray;
+            lblDescription.Location = new Point(3, 28);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(97, 17);
+            lblDescription.TabIndex = 2;
+            lblDescription.Text = "Base Quantities";
             // 
-            // button1
+            // btnRate
             // 
-            button1.BackColor = Color.FromArgb(4, 45, 99);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(239, 51);
-            button1.Name = "button1";
-            button1.Size = new Size(69, 34);
-            button1.TabIndex = 3;
-            button1.Text = "Rate";
-            button1.UseVisualStyleBackColor = false;
+            btnRate.BackColor = Color.FromArgb(4, 45, 99);
+            btnRate.FlatStyle = FlatStyle.Popup;
+            btnRate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRate.ForeColor = Color.White;
+            btnRate.Location = new Point(239, 51);
+            btnRate.Name = "btnRate";
+            btnRate.Size = new Size(69, 34);
+            btnRate.TabIndex = 3;
+            btnRate.Text = "Rate";
+            btnRate.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // lblSubmited
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(3, 65);
-            label4.Name = "label4";
-            label4.Size = new Size(85, 20);
-            label4.TabIndex = 4;
-            label4.Text = "Submitted :";
+            lblSubmited.AutoSize = true;
+            lblSubmited.Location = new Point(3, 65);
+            lblSubmited.Name = "lblSubmited";
+            lblSubmited.Size = new Size(143, 20);
+            lblSubmited.TabIndex = 4;
+            lblSubmited.Text = "2026-11-10 14:30:00";
             // 
             // CardNotGradedUc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label4);
-            Controls.Add(button1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblSubmited);
+            Controls.Add(btnRate);
+            Controls.Add(lblDescription);
+            Controls.Add(lblClassName);
+            Controls.Add(lblStudnentName);
             Name = "CardNotGradedUc";
             Size = new Size(311, 88);
             ResumeLayout(false);
@@ -105,10 +105,10 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button button1;
-        private Label label4;
+        private Label lblStudnentName;
+        private Label lblClassName;
+        private Label lblDescription;
+        private Button btnRate;
+        private Label lblSubmited;
     }
 }
